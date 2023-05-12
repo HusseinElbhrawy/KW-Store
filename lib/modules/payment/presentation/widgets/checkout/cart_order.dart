@@ -73,15 +73,20 @@ class _CartOrderState extends State<CartOrder> {
           const ShippingAddressCardWidget(),
           SizedBox(
             height: AppDimensions.checkoutProductCartItemHeight(context) * 2 +
-                AppConstant.defaultPadding(context),
+                AppConstant.defaultPadding(context) * 2,
             child: CardSwiper(
               numberOfCardsDisplayed: 1,
               cardBuilder: (context, index) {
-                return ProductOrderItemWidget(
-                  data: context.read<PaymentBloc>().dateTime,
-                  subTitle: 'Order ID : ${context.read<PaymentBloc>().orderId}',
-                  title: 'Order Placed',
-                  trailing: 'Pending',
+                return BlocBuilder<PaymentBloc, PaymentState>(
+                  builder: (context, state) {
+                    return ProductOrderItemWidget(
+                      data: state.orderDate.toString(),
+                      subTitle:
+                          '${AppStrings.orderID(context)} : ${context.read<PaymentBloc>().orderId}',
+                      title: AppStrings.orderPlaced(context),
+                      trailing: AppStrings.pending(context),
+                    );
+                  },
                 );
               },
               cardsCount: 10,

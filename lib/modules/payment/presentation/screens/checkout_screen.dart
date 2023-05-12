@@ -22,8 +22,11 @@ class CheckoutScreen extends StatefulWidget {
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
   List<Widget> processList = [
-    const Expanded(
-      child: CartOrder(),
+    Expanded(
+      child: BlocProvider.value(
+        value: serviceLocator<PaymentBloc>()..dateTime(),
+        child: const CartOrder(),
+      ),
     ),
     Expanded(
       child: BlocProvider.value(

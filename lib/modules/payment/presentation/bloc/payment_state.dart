@@ -24,6 +24,7 @@ class PaymentState extends Equatable {
     this.getRefCodeErrorMessage,
     this.getRefCodeState = RequestState.initial,
     this.refCode,
+    this.orderDate,
   });
   final String cardHolderName;
   final String cardNumber;
@@ -57,6 +58,9 @@ class PaymentState extends Equatable {
   final RequestState getRefCodeState;
   final KioskDataPayment? refCode;
 
+  //! Cart Order
+  final String? orderDate;
+
   @override
   List<Object?> get props => [
         cardHolderName,
@@ -80,6 +84,7 @@ class PaymentState extends Equatable {
         getRefCodeErrorMessage,
         getRefCodeState,
         refCode,
+        orderDate,
       ];
 
   PaymentState copyWith({
@@ -104,6 +109,7 @@ class PaymentState extends Equatable {
     String? getRefCodeErrorMessage,
     RequestState? getRefCodeState,
     KioskDataPayment? refCode,
+    String? orderDate,
   }) {
     return PaymentState(
       cardHolderName: cardHolderName ?? this.cardHolderName,
@@ -135,6 +141,7 @@ class PaymentState extends Equatable {
           getRefCodeErrorMessage ?? this.getRefCodeErrorMessage,
       getRefCodeState: getRefCodeState ?? this.getRefCodeState,
       refCode: refCode ?? this.refCode,
+      orderDate: orderDate ?? this.orderDate,
     );
   }
 }

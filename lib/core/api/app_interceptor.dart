@@ -24,7 +24,7 @@ class AppInterceptor extends Interceptor {
 
     log('lang: $lang', name: 'AppInterceptor');
 
-    if (EndPoint.selectedBaseUrl == EndPoint.baseUrl) {
+    if (EndPoint.selectedBaseUrl.compareTo(EndPoint.baseUrl) == 0) {
       header = {
         AppStrings.contentType: AppStrings.applicationJson,
         'lang': lang,

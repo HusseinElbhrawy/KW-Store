@@ -7,7 +7,10 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:kw_store/app/injector.dart';
+import 'package:kw_store/core/database/i_local_data_base.dart';
 import 'package:kw_store/core/usecase/params/params.dart';
+import 'package:kw_store/core/utils/constant.dart';
 import 'package:kw_store/modules/home/presentation/bloc/home_bloc.dart';
 import 'package:kw_store/modules/payment/domain/entities/kiosk_payment.dart';
 import 'package:kw_store/modules/payment/domain/entities/order_registration.dart';
@@ -111,7 +114,29 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
   }
 
   String orderId = (math.Random().nextInt(900000) + 100000).toString();
-  String dateTime = DateFormat.yMMMMEEEEd().format(DateTime.now()).toString();
+
+  void dateTime() async {
+    String lang =
+        await serviceLocator<ILocalDataBase>().get(AppConstant.kLang) ?? false
+            ? 'ar'
+            : 'en';
+    DateFormat formatter = DateFormat('EEEE، d MMMM، yyyy، hh:mm a', lang);
+    emit(state.copyWith(orderDate: formatter.format(DateTime.now())));
+    // if (lang.compareTo('ar') == 0) {
+    //   DateTime now = DateTime.now();
+
+    //   String formattedDate = formatter.format(now);
+
+    // } else {
+    //   emit(
+    //     state.copyWith(
+    //       orderDate: DateFormat.yMMMMEEEEd().format(DateTime.now()).toString(),
+    //     ),
+    //   );
+    // }
+
+    log(state.orderDate.toString());
+  }
 
   void _authenticationRequest() async {
     emit(state.copyWith(authenticatedPaymentState: RequestState.loading));

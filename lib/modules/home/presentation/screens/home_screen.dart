@@ -32,6 +32,8 @@ class HomeScreen extends StatelessWidget {
                 ..add(GetFavoriteDataEvent())
                 ..add(GetCartDataEvent())
                 ..add(GetTotalPriceEvent());
+
+              // serviceLocator<ProfileBloc>().add(GetAddressesEvent());
             },
           );
         }

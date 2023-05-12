@@ -9,7 +9,7 @@
 
 
    <application
-        android:label="kw_store"
+        android:label="KW Store"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

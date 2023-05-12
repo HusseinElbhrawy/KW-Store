@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:kw_store/core/utils/app_strings.dart';
 
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/utils/constant.dart';
@@ -22,7 +23,7 @@ class AddressScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: SmallTextWidget(
-          'Address',
+          AppStrings.address(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),
@@ -43,9 +44,9 @@ class AddressScreen extends StatelessWidget {
       body: BlocBuilder<ProfileBloc, ProfileState>(
         builder: (context, state) {
           if (state.address == null || state.address!.isEmpty) {
-            return const EmptyWidget(
-              title: 'No Address Found!',
-              subTitle: 'Please add your address to continue',
+            return EmptyWidget(
+              title: AppStrings.noAddressFound(context),
+              subTitle: AppStrings.pleaseAddYourAddress(context),
             );
           } else {
             return ListView.builder(
@@ -130,7 +131,11 @@ class AddressItemWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SmallTextWidget(
-                  address.type,
+                  address.type.contains('Home')
+                      ? '${AppStrings.homeAddress(context)}🏠'
+                      : address.type.contains('Work')
+                          ? '${AppStrings.workAddress(context)}💼'
+                          : AppStrings.otherAddress(context),
                   size: AppDimensions.font20(context),
                   fontWeight: FontWeight.w600,
                   overflow: TextOverflow.visible,
@@ -149,9 +154,9 @@ class AddressItemWidget extends StatelessWidget {
                 value: address.key,
                 groupValue: state.defaultAddress?.key,
                 onChanged: (value) {
-                  context.read<ProfileBloc>().add(
-                        SetDefaultAddressEvent(address: address),
-                      );
+                  context
+                      .read<ProfileBloc>()
+                      .add(SetDefaultAddressEvent(address: address));
                 },
               );
             },

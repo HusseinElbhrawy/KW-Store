@@ -69,7 +69,7 @@ class _AddNewAddressScreenState extends State<AddNewAddressScreen> {
                 child: SmallTextWidget(
                   state.getCurrentAddressErrorMessage ??
                       state.getCurrentLocationErrorMessage ??
-                      'Error Occurred',
+                      AppStrings.errorHappen(context),
                   overflow: TextOverflow.visible,
                 ),
               ),

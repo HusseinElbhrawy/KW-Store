@@ -43,7 +43,7 @@
  "loginNow" : "تسجيل الدخول الان",
 
 
- "home" : "الصفحه الرئيسية",
+ "home" : "الرئيسية",
 
 
  "categories" : "التصنيفات",
@@ -79,7 +79,7 @@
  "whatsAppNotInstalled" : "الواتس اب ليس مثبت علي هاتفك",
 
 
- "profile" : "السحاب",
+ "profile" : "الملف الشخصي",
  "faqs" : "الاسئلة الشائعه",
  "notification" : "الاشعارات",
  "personalInfo" : "المعلومات الشخصيه",
@@ -157,7 +157,18 @@
 
 
  "errorHappen" : "حدث خطا ما",
- "contentType" : "Content-Type",
- "applicationJson" : "application/json",
+ "homeAddress" : "المنزل",
+ "workAddress" : "العمل",
+ "otherAddress" : "اخري",
+
+
+ "noAddressFound" :"لا توجد عناوين متاحه!",
+ "pleaseAddYourAddress":"من فضلك اضف عنوانك",
+
+ "orderPlaced":"تم ارسال الطلب",
+ "orderID":"رقم الطلب",
+ "pending":"قيد الانتظار",
+
+
  "noRouteFound" : "لا يوجد طريق متاح"
 }

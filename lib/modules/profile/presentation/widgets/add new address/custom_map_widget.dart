@@ -61,6 +61,7 @@ class _CustomMapWidgetState extends State<CustomMapWidget> {
                       context.read<ProfileBloc>().add(
                             AssignNewAddressEvent(
                               locationData: argument,
+                              context: context,
                             ),
                           );
                     },
@@ -82,6 +83,7 @@ class _CustomMapWidgetState extends State<CustomMapWidget> {
                         context.read<ProfileBloc>().add(
                               AssignNewAddressEvent(
                                 locationData: widget.state.currentLocationData!,
+                                context: context,
                               ),
                             );
 

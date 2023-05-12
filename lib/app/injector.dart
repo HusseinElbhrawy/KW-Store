@@ -120,6 +120,7 @@ Future<void> _setUpBloc() async {
       serviceLocator(),
       serviceLocator(),
       serviceLocator(),
+      serviceLocator(),
     ),
   );
   serviceLocator.registerLazySingleton(
@@ -315,7 +316,7 @@ Future<void> _setUpExternal() async {
     () => LogInterceptor(
       request: true,
       requestBody: false,
-      requestHeader: false,
+      requestHeader: true,
       error: true,
       responseBody: true,
       responseHeader: false,

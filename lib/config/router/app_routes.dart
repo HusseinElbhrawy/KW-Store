@@ -100,18 +100,29 @@ class AppRoutes {
 
       case Routes.layoutRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider.value(
-            value: serviceLocator<HomeBloc>(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider.value(
+                value: serviceLocator<HomeBloc>(),
+              ),
+              BlocProvider.value(
+                value: serviceLocator<ProfileBloc>()..add(GetAddressesEvent()),
+              ),
+            ],
             child: const LayoutScreen(),
           ),
         );
 
       case Routes.homeRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => serviceLocator<HomeBloc>()
-              ..add(GetCategoriesDataEvent())
-              ..add(GetHomeDataEvent()),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => serviceLocator<HomeBloc>()
+                  ..add(GetCategoriesDataEvent())
+                  ..add(GetHomeDataEvent()),
+              ),
+            ],
             child: const HomeScreen(),
           ),
         );
@@ -121,7 +132,7 @@ class AppRoutes {
           builder: (_) => MultiBlocProvider(
             providers: [
               BlocProvider.value(
-                value: serviceLocator<ProfileBloc>(),
+                value: serviceLocator<ProfileBloc>()..add(GetAddressesEvent()),
               ),
               BlocProvider.value(
                 value: serviceLocator<SplashBloc>(),
@@ -175,7 +186,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => BlocProvider.value(
             value: serviceLocator<ProfileBloc>()
-              ..add(GetCurrentLocationEvent()),
+              ..add(const GetCurrentLocationEvent()),
             child: const AddNewAddressScreen(),
           ),
         );

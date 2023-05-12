@@ -15,7 +15,7 @@ class AppStrings {
   static final AppStrings _instance = AppStrings._internal();
   factory AppStrings() => _instance;
 
-  static const appName = 'E Commerce';
+  static const appName = 'KW Store';
 
   //! OnBoarding Screen
   static String shoppingNow(BuildContext context) => 'shoppingNow'.tr(context)!;
@@ -59,6 +59,11 @@ class AppStrings {
 
   //! Layout Screen
   static String home(BuildContext context) => 'home'.tr(context)!;
+
+  static String homeAddress(BuildContext context) => 'homeAddress'.tr(context)!;
+  static String workAddress(BuildContext context) => 'workAddress'.tr(context)!;
+  static String otherAddress(BuildContext context) =>
+      'otherAddress'.tr(context)!;
 
   //! Home Screen
   static String categories(BuildContext context) => 'categories'.tr(context)!;
@@ -197,4 +202,14 @@ class AppStrings {
   static const String contentType = 'Content-Type';
   static const String applicationJson = 'application/json';
   static const String noRouteFound = 'noRouteFound';
+
+  static String noAddressFound(BuildContext context) =>
+      'noAddressFound'.tr(context)!;
+
+  static String pleaseAddYourAddress(BuildContext context) =>
+      'pleaseAddYourAddress'.tr(context)!;
+
+  static String orderPlaced(BuildContext context) => 'orderPlaced'.tr(context)!;
+  static String orderID(BuildContext context) => 'orderID'.tr(context)!;
+  static String pending(BuildContext context) => 'pending'.tr(context)!;
 }

@@ -149,10 +149,23 @@
  
   "next" : "Next",
  
+  "homeAddress" : "Home Address",
+  "workAddress" : "Work Address",
+  "otherAddress" : "Other Address",
  
   "errorHappen" : "Error Happen",
-  "contentType" : "Content-Type",
-  "applicationJson" : "application/json",
+  
+   
+ "noAddressFound" :"No Address Found!",
+ "pleaseAddYourAddress":"Please add your address to continue",
+
+ 
+ "orderPlaced":"Order Placed",
+ "orderID":"Order ID",
+ "pending":"Pending",
+
+
   "noRouteFound" : "No Route Found"
+
  }
  

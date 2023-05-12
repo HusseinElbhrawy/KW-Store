@@ -23,18 +23,18 @@ class AddressInformationWidget extends StatelessWidget {
             builder: (context, state) {
               return DropdownButtonFormField(
                 value: state.addressType ?? 'Home 🏠',
-                items: const [
+                items: [
                   DropdownMenuItem(
                     value: 'Home 🏠',
-                    child: Text('Home 🏠'),
+                    child: Text('${AppStrings.homeAddress(context)} 🏠'),
                   ),
                   DropdownMenuItem(
                     value: 'Work 💼',
-                    child: Text('Work 💼'),
+                    child: Text('${AppStrings.workAddress(context)}💼'),
                   ),
                   DropdownMenuItem(
                     value: 'Other',
-                    child: Text('Other'),
+                    child: Text(AppStrings.otherAddress(context)),
                   ),
                 ],
                 autofocus: true,

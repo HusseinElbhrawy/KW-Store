@@ -20,6 +20,7 @@ import 'package:kw_store/modules/profile/domain/usecases/get_user_address_use_ca
 import 'package:kw_store/modules/profile/domain/usecases/save_new_address_use_case.dart';
 import 'package:kw_store/modules/profile/domain/usecases/update_profile_use_case.dart';
 import 'package:kw_store/modules/profile/domain/usecases/update_user_address_use_case.dart';
+import 'package:kw_store/modules/splash/presentation/bloc/splash_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../../../../core/database/i_local_data_base.dart';
@@ -40,7 +41,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final DeleteNewAddressUseCase _deleteAddressUseCase;
   final UpdateUserAddressUseCase _updateUserAddressUseCase;
   final GetUserAddressUseCase _getUserAddressUseCase;
-
+  final SplashBloc _splashBloc;
   ProfileBloc(
     this._getProfileDataUseCase,
     this._updateProfileUseCase,
@@ -50,6 +51,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     this._deleteAddressUseCase,
     this._updateUserAddressUseCase,
     this._getUserAddressUseCase,
+    this._splashBloc,
   ) : super(const ProfileState()) {
     on<GetProfileDataEvent>((event, emit) {
       return _getProfileData();
@@ -73,13 +75,11 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
     on<GetTheAddressOfLocationEvent>((event, emit) {
       return _getTheAddressOfLocation(
-        event.locationData.latitude,
-        event.locationData.longitude,
-      );
+          event.locationData.latitude, event.locationData.longitude);
     });
 
     on<AssignNewAddressEvent>((event, emit) {
-      return _assignNewLocation(event.locationData);
+      return _assignNewLocation(event.locationData, event.context);
     });
 
     on<AddNewAddressEvent>((event, emit) {
@@ -322,11 +322,19 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         //   localeIdentifier: 'en',
         // );
 
+        String lang =
+            await serviceLocator<ILocalDataBase>().get(AppConstant.kLang) ??
+                    false
+                ? 'ar'
+                : 'en';
+
+        log(lang.toString(), name: 'Current Lang');
+
         var placeMarks =
             await GeocodingPlatform.instance.placemarkFromCoordinates(
           latitude,
           longitude,
-          localeIdentifier: 'en',
+          localeIdentifier: lang,
         );
         _setInfoOfPlace(placeMarks);
 
@@ -354,12 +362,14 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     setStateController(placeMarks.first.administrativeArea!);
   }
 
-  void _assignNewLocation(LatLng location) {
+  void _assignNewLocation(LatLng location, BuildContext context) {
     emit(
       state.copyWith(locationData: location),
     );
 
-    add(GetTheAddressOfLocationEvent(locationData: location));
+    add(GetTheAddressOfLocationEvent(
+      locationData: location,
+    ));
   }
 
   void _addNewAddress(Address address) async {
@@ -404,6 +414,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
           if (address.isNotEmpty) {
             add(GetDefaultAddressEvent());
           }
+
+          log(address.toString(), name: 'Address');
           return state.copyWith(
             getAddressRequestState: RequestState.loaded,
             address: address,
@@ -514,7 +526,9 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
   @override
   Future<void> close() {
-    isClosed ? log('ProfileBloc already closed') : log('ProfileBloc closed');
+    isClosed
+        ? log('ProfileBloc already closed', name: 'Profile Bloc')
+        : log('ProfileBloc closed', name: 'Profile Bloc');
     _placeController.dispose();
     _cityController.dispose();
     _stateController.dispose();

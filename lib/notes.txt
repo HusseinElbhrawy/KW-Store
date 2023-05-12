@@ -23,8 +23,8 @@
     About ✅
     Address ✅
     Orders 
-    Dark & light Mode
-    Localization 
+    Dark & light Mode✅
+    Localization  ✅
     Logout
     
 

@@ -40,7 +40,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   serviceLocator<ProfileBloc>()
                     ..add(GetProfileDataEvent())
                     ..add(GetNotificationDataEvent())
-                    ..add(GetFAQsDataEvent());
+                    ..add(GetFAQsDataEvent())
+                    ..add(GetAddressesEvent());
                 },
               );
           }

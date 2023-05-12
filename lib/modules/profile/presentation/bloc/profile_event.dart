@@ -27,22 +27,29 @@ class GetFAQsDataEvent extends ProfileEvent {
 }
 
 class GetCurrentLocationEvent extends ProfileEvent {
+  const GetCurrentLocationEvent();
   @override
   List<Object?> get props => [];
 }
 
 class GetTheAddressOfLocationEvent extends ProfileEvent {
   final LatLng locationData;
-  const GetTheAddressOfLocationEvent({required this.locationData});
+  const GetTheAddressOfLocationEvent({
+    required this.locationData,
+  });
   @override
-  List<Object?> get props => [locationData];
+  List<Object?> get props => [
+        locationData,
+      ];
 }
 
 class AssignNewAddressEvent extends ProfileEvent {
+  final BuildContext context;
   final LatLng locationData;
-  const AssignNewAddressEvent({required this.locationData});
+  const AssignNewAddressEvent(
+      {required this.locationData, required this.context});
   @override
-  List<Object?> get props => [locationData];
+  List<Object?> get props => [locationData, context];
 }
 
 class AddNewAddressEvent extends ProfileEvent {
