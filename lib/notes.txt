@@ -1,0 +1,42 @@
+[✅] Home Code Refactor Modules and add Skelton(Shimmer Effect) While Loading
+        &&
+    User Cached Network Image
+
+
+[ ] Home   
+    Add && Remove To Cart with TDD ✅
+    Add && Remove TO Fav with TDD ✅ 
+    Handle if Error in Home Screen show ErrorHomeWidget✅
+    Cart Cart ✅
+    Fav Screen ✅
+    Product Overview ✅
+    Home Categories -> (Cached Data) ✅
+    Home Search ✅
+
+ 
+[ ] Profile Screen 
+    Personal info ✅
+    Notification ✅
+    Cart ✅
+    Wishlist✅
+    Help & Support✅
+    About ✅
+    Address ✅
+    Orders 
+    Dark & light Mode
+    Localization 
+    Logout
+    
+
+
+Todo: if we can't replace paymob iframe i will use other payment gateway like square_in_app_payments "https://pub.dev/packages/square_in_app_payments"
+[ ] Payment Screen 
+    Done Screen ✅
+    Mobile Wallets 
+    Other Payment Methods (Ref Code)
+    Cash On Delivery ✅
+    Get Notification After Payment 
+
+
+    
+
