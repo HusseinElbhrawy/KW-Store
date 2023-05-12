@@ -26,7 +26,7 @@ class _AddNewAddressScreenState extends State<AddNewAddressScreen> {
       appBar: AppBar(
         centerTitle: false,
         title: SmallTextWidget(
-          AppStrings.addNewAddress,
+          AppStrings.addNewAddress(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),

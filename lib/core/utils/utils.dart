@@ -81,8 +81,8 @@ class AppUtils {
                 ),
               ),
               AppConstant.horizontalDivider(),
-              const BigTextWidget(
-                AppStrings.logout,
+              BigTextWidget(
+                AppStrings.logout(context),
                 fontWeight: AppFontsWeight.medium,
               ),
               AppConstant.horizontalDivider(),
@@ -93,7 +93,7 @@ class AppUtils {
               ),
               AppConstant.horizontalDivider(),
               BigTextWidget(
-                AppStrings.areYouSureYouWantLogOut,
+                AppStrings.areYouSureYouWantLogOut(context),
                 align: TextAlign.center,
                 size: AppDimensions.font20(context),
                 fontWeight: AppFontsWeight.medium,
@@ -106,8 +106,8 @@ class AppUtils {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey.shade300,
                       ),
-                      child: const SmallTextWidget(
-                        AppStrings.cancel,
+                      child: SmallTextWidget(
+                        AppStrings.cancel(context),
                         color: Colors.black,
                       ),
                       onPressed: () {
@@ -122,7 +122,7 @@ class AppUtils {
                         backgroundColor: Colors.red.shade300,
                       ),
                       child: SmallTextWidget(
-                        AppStrings.yesLogout,
+                        AppStrings.yesLogout(context),
                         color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       onPressed: () {

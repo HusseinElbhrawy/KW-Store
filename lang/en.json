@@ -1,0 +1,158 @@
+{
+  
+  "backToHome" :"Back to Home",
+  "paymentSuccessful" : "Payment Successful",
+  "thankYouForPurchase" : "Thank you for your purchase",
+  "yourOrder" : "Your Order",
+   "appName" : "E Commerce",
+   "shoppingNow" : "Shopping Now",
+  "offersAndDiscounts" : "Offers & Discounts",
+  "secureAndEasyPayment" : "Secure & Easy Payment",
+  "loremText" :
+     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim. Pellentesque eget.",
+ 
+ 
+  "loginToYourAccount" : "Login to your account",
+  "resetPassword" : "Reset Password?",
+  "donNotHaveAnAccount" : "Don\"t have an account?",
+  "register" : "Register",
+  "login" : "Login",
+  "rememberMe" : "Remember me",
+  "password" : "Password",
+  "passwordValidationMessage" :
+     "InValid,The password must be at least 8 characters",
+  "emailValidationMessage" :
+     "Please, Enter Valid Email Address",
+  "emailAddress" : "Email Address",
+ 
+ 
+  "registerToStart" : "Hello! Register to get started",
+  "registerNameValidation" : "Please , Enter Valid Name",
+  "name" : "Name",
+ 
+  "registerPhoneNumberValidation" :
+     "Phone Must Start With + And Contain Between 8 and 15 Digits.",
+  "phoneNumber" : "Phone Number",
+  "alreadyHaveAnAccount" : "Already have an account?",
+  "loginNow" : "Login Now",
+ 
+ 
+  "home" : "Home",
+ 
+ 
+  "categories" : "Categories",
+  "products" : "Products",
+  "search" : "Search",
+  "retry" : "Retry",
+  "oops" : "Oops!",
+  "noProductsFound" : "Sorry , No Products Found",
+ 
+ 
+  "favorites" : "Favorites",
+  "yourFavoritesIsEmpty" : "Your Favorites is Empty!",
+ 
+ 
+  "yourCartIsEmpty" : "Your cart is empty",
+  "startShoppingNow" : "Start shopping now!",
+  "cart" : "Cart",
+  "total" : "Total",
+  "checkout" : "Checkout",
+  "delete" : "Delete",
+ 
+ 
+  "price" : "Price",
+ 
+ 
+  "about" : "About",
+  "storeDetails" :
+     "The Store application is an exhibition for companies to book or buy products through companies and stores.",
+  "thisAppDevelopedBy" : "The application is developed by ",
+  "husseinElbhrawy" : "Hussein Elbhrawy",
+  "contactMe" : "Contact Me",
+  "error" : "Error",
+  "whatsAppNotInstalled" : "whatsapp no installed",
+ 
+ 
+  "profile" : "Account",
+  "faqs" : "FAQs",
+  "notification" : "Notification",
+  "personalInfo" : "Personal Info",
+  "fullName" : "Full Name",
+  "comingSoon" : "Coming soon",
+  "address" : "Address",
+  "orders" : "Orders",
+  "wishlist" : "Wishlist",
+  "helpAndSupport" : "Help & Support",
+  "arabic" : "Arabic",
+  "darkMode" : "Dark Mode",
+  "logout" : "Logout",
+  "areYouSureYouWantLogOut" :
+     "Are you sure you want to logout?",
+  "cancel" : "Cancel",
+  "yesLogout" : "Yes, Logout",
+ 
+ 
+  "save" : "Save",
+  "addNotesForDelivery" : "Add notes for delivery",
+  "notes" : "Notes",
+  "fullAddressDetails" : "Full Address Details",
+  "addressDetails" : "Address Details",
+  "state" : "State",
+  "city" : "City",
+  "placeName" : "Place Name",
+  "addNewAddress" : "Add New Address",
+ 
+ 
+  "pay" : "Pay",
+ 
+  "creditCard" : "Credit Card",
+ 
+  "cardNumber" : "Card Number",
+ 
+  "cardHolderName" : "Card Holder Name",
+ 
+  "expiryDate" : "Expiry Date",
+ 
+  "cvv" : "CVV",
+ 
+ 
+  "paymentMethods" : "Payment Method",
+ 
+  "payWithPaypal" : "Pay With Paypal Coming Soon",
+ 
+  "mobileWallets" : "Mobile Wallet",
+ 
+  "cashOnDelivery" : "Cash on Delivery",
+ 
+  "otherPaymentMethods" : "Other Payment Method",
+ 
+ 
+  "placeOrder" : "Place Order",
+ 
+  "payment" : "Payment",
+ 
+  "done" : "Done",
+ 
+  "totalPrice" : "Total Price",
+ 
+  "subTotal" : "Subtotal",
+ 
+  "shipping" : "Shipping",
+ 
+  "discount" : "Discount",
+ 
+  "couponCode" : "Coupon Code",
+ 
+  "enterCouponCode" : "Enter Coupon Code",
+ 
+  "shippingAddress" : "Shipping Address",
+ 
+  "next" : "Next",
+ 
+ 
+  "errorHappen" : "Error Happen",
+  "contentType" : "Content-Type",
+  "applicationJson" : "application/json",
+  "noRouteFound" : "No Route Found"
+ }
+ 

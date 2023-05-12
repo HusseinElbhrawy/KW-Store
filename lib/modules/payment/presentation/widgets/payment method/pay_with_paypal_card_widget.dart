@@ -19,7 +19,7 @@ class PayWithPaypalCardWidget extends StatelessWidget {
       groupValue: context.read<PaymentBloc>().state.paymentMethod,
       path: AppSvgAssets.paypal,
       onChange: (value) {
-        showWarningToast(AppStrings.payWithPaypal).show(context);
+        showWarningToast(AppStrings.payWithPaypal(context)).show(context);
       },
       value: PaymentMethod.paypal,
     );

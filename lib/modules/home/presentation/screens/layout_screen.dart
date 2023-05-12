@@ -100,7 +100,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 FlashyTabBarItem(
                   icon: const Icon(Icons.home_outlined),
                   title: Text(
-                    AppStrings.home,
+                    AppStrings.home(context),
                     style: TextStyle(
                       color: context.theme.textTheme.bodyLarge!.color,
                     ),
@@ -109,7 +109,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 FlashyTabBarItem(
                   icon: const Icon(Icons.favorite_border_outlined),
                   title: Text(
-                    AppStrings.favorites,
+                    AppStrings.favorites(context),
                     style: TextStyle(
                       color: context.theme.textTheme.bodyLarge!.color,
                     ),
@@ -118,7 +118,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 FlashyTabBarItem(
                   icon: const Icon(Icons.shopping_bag_outlined),
                   title: Text(
-                    AppStrings.cart,
+                    AppStrings.cart(context),
                     style: TextStyle(
                       color: context.theme.textTheme.bodyLarge!.color,
                     ),
@@ -129,7 +129,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     Icons.account_circle_outlined,
                   ),
                   title: Text(
-                    AppStrings.profile,
+                    AppStrings.profile(context),
                     style: TextStyle(
                       color: context.theme.textTheme.bodyLarge!.color,
                     ),

@@ -84,8 +84,8 @@ class AppRoutes {
 
       case Routes.loginRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => serviceLocator<AuthBloc>(),
+          builder: (_) => BlocProvider.value(
+            value: serviceLocator<AuthBloc>(),
             child: const LoginScreen(),
           ),
         );

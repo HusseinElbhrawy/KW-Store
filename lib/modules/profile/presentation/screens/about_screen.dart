@@ -22,7 +22,7 @@ class AboutScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: BigTextWidget(
-          AppStrings.about,
+          AppStrings.about(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),
@@ -36,7 +36,7 @@ class AboutScreen extends StatelessWidget {
           ),
           AppConstant.horizontalDivider(),
           BigTextWidget(
-            AppStrings.storeDetails,
+            AppStrings.storeDetails(context),
             size: AppDimensions.font20(context),
             overflow: TextOverflow.visible,
           ),

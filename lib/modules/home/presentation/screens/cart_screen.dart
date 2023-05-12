@@ -19,8 +19,8 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       bottomNavigationBar: const CheckoutWidget(),
       appBar: AppBar(
-        title: const BigTextWidget(
-          AppStrings.cart,
+        title: BigTextWidget(
+          AppStrings.cart(context),
           fontWeight: AppFontsWeight.bold,
         ),
       ),

@@ -47,10 +47,10 @@ class HomeProductsLoadedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (state.isSearch && state.searchProductsData!.isEmpty) {
-      return const SliverToBoxAdapter(
+      return SliverToBoxAdapter(
         child: Center(
           child: EmptyWidget(
-            title: AppStrings.noProductsFound,
+            title: AppStrings.noProductsFound(context),
           ),
         ),
       );

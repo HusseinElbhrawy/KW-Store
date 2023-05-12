@@ -8,9 +8,9 @@ class EmptyCartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const EmptyWidget(
-      title: AppStrings.yourCartIsEmpty,
-      subTitle: AppStrings.startShoppingNow,
+    return EmptyWidget(
+      title: AppStrings.yourCartIsEmpty(context),
+      subTitle: AppStrings.startShoppingNow(context),
     );
   }
 }

@@ -77,7 +77,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
           }
         },
         decoration: InputDecoration(
-          hintText: AppStrings.search,
+          hintText: AppStrings.search(context),
           hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: Colors.grey.shade500,
               ),

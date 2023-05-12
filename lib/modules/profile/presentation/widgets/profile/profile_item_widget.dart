@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:kw_store/core/utils/media_query_values.dart';
+import 'package:kw_store/modules/splash/presentation/bloc/splash_bloc.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/dimensions.dart';
@@ -69,9 +71,15 @@ class ProfileItemWidget extends StatelessWidget {
                 end: AppConstant.defaultPadding(context),
               ),
               child: trailing ??
-                  Icon(
-                    IconlyLight.arrowRight2,
-                    color: context.theme.iconTheme.color,
+                  BlocBuilder<SplashBloc, SplashState>(
+                    builder: (context, state) {
+                      return Icon(
+                        state.currentLang == 'ar'
+                            ? IconlyLight.arrowLeft2
+                            : IconlyLight.arrowRight2,
+                        color: context.theme.iconTheme.color,
+                      );
+                    },
                   ),
             ),
           ],

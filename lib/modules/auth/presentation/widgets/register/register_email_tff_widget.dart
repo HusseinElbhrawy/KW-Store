@@ -17,17 +17,17 @@ class RegisterEmailTFFWidget extends StatelessWidget {
     return TextFormField(
       validator: (value) {
         if (!Validator.validateEmail(value!)) {
-          return AppStrings.emailValidationMessage;
+          return AppStrings.emailValidationMessage(context);
         }
         return null;
       },
       controller: _emailController,
       keyboardType: TextInputType.emailAddress,
       textInputAction: TextInputAction.next,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         hintText: 'hussein@gmail.com',
-        label: SmallTextWidget(AppStrings.emailAddress),
-        prefixIcon: Icon(Icons.email_outlined),
+        label: SmallTextWidget(AppStrings.emailAddress(context)),
+        prefixIcon: const Icon(Icons.email_outlined),
       ),
     );
   }

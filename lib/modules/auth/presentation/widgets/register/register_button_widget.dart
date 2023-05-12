@@ -51,7 +51,7 @@ class RegisterButtonWidget extends StatelessWidget {
                   fixedSize: AppConstant.defaultButtonSize(context),
                 ),
                 child: SmallTextWidget(
-                  AppStrings.register,
+                  AppStrings.register(context),
                   color: Theme.of(context).textTheme.bodySmall!.color,
                 ),
               ),

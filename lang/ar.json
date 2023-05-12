@@ -1,0 +1,163 @@
+{
+  
+ "backToHome" :"العودة الي الصفحة الرئيسية",
+
+ "paymentSuccessful" : "تمت عملية الدفع بنجاح",
+
+ "thankYouForPurchase" : "شكرا لك علي عملية الشراء",
+ "yourOrder" : "الطلب الخاص بك",
+
+
+ "appName" : "متجر الكتروني",
+
+
+ "shoppingNow" : "تسوق الان",
+ "offersAndDiscounts" : "العروض & الخوصمات",
+ "secureAndEasyPayment" : "أمن& سهل الدفع",
+ "loremText" :
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim. Pellentesque eget.",
+
+
+ "loginToYourAccount" : "تسجيل الدخول الي حسابك",
+ "resetPassword" : "نسيان كلمة السر؟",
+ "donNotHaveAnAccount" : "لا أملك حساب ؟ ",
+ "register" : "إنشاء حساب",
+ "login" : "تسجيل الدخول",
+ "rememberMe" : "تذكرني",
+ "password" : "كلمة السر",
+ "passwordValidationMessage" :
+    "كلمه مرور غير صحيحة , يجب ان لا تقل علي 8 احرف ",
+ "emailValidationMessage" :
+    "من فضلك ادخل بريد الكتروني صحيح ",
+ "emailAddress" : "البريد الالكتروني",
+
+
+ "registerToStart" : "مرحبا , بقوم بالتسجيل لنبدأ",
+ "registerNameValidation" : "من فضلك ادخل اسم صحيح",
+ "name" : "الاسم",
+
+ "registerPhoneNumberValidation" :
+    " يجب ان يبدا رقم الهاتف ب + ويجب ان يكون طوله بين 8 الي 15 رقم",
+ "phoneNumber" : "رقم الهاتف",
+ "alreadyHaveAnAccount" : "بالفعل لديك حساب ؟",
+ "loginNow" : "تسجيل الدخول الان",
+
+
+ "home" : "الصفحه الرئيسية",
+
+
+ "categories" : "التصنيفات",
+ "products" : "المنتجات",
+ "search" : "البحث",
+ "retry" : "اعادة المحاولة",
+ "oops" : "حدث خطا ما !",
+ "noProductsFound" : "نعتذر , لا يوجد منتج مطابق",
+
+
+ "favorites" : "المفضلة",
+ "yourFavoritesIsEmpty" : "سلة المفضله فارغه!",
+
+
+ "yourCartIsEmpty" : "حقيبة التسوق فارغه",
+ "startShoppingNow" : "ابدا في التسوق الان!",
+ "cart" : "حقيبة التسوق",
+ "total" : "الكلي",
+ "checkout" : "الدفع",
+ "delete" : "حذف",
+
+
+ "price" : "السعر",
+
+
+ "about" : "من نحن",
+ "storeDetails" :
+    "هذا المتجر الالكتروني للتجارة الالكترونيه بين الشركات والافراد",
+ "thisAppDevelopedBy" : "تم تطوير التطبيق بواسطة ",
+ "husseinElbhrawy" : "حسين البحراوي",
+ "contactMe" : "تواصل معي",
+ "error" : "خطا",
+ "whatsAppNotInstalled" : "الواتس اب ليس مثبت علي هاتفك",
+
+
+ "profile" : "السحاب",
+ "faqs" : "الاسئلة الشائعه",
+ "notification" : "الاشعارات",
+ "personalInfo" : "المعلومات الشخصيه",
+ "fullName" : "الاسم بالكامل",
+ "comingSoon" : "قريبا",
+ "address" : "العنوان",
+ "orders" : "الطلبات",
+ "wishlist" : "المفضلة",
+ "helpAndSupport" : "المساعده والدعم",
+ "arabic" : "عربي",
+ "darkMode" : "الوضع الداكن",
+ "logout" : "تسجيل الخروج",
+ "areYouSureYouWantLogOut" :
+    "هل انت متاكد انك تريد تسجيل الخروج?",
+ "cancel" : "الغاء",
+ "yesLogout" : "نعم , اخرج",
+
+
+ "save" : "حفظ",
+ "addNotesForDelivery" : "اضف ملاحظة أثناء التوصيل",
+ "notes" : "ملاحظات",
+ "fullAddressDetails" : "العنوان بالكامل ",
+ "addressDetails" : "العنوان بالكامل",
+ "state" : "الولايه",
+ "city" : "المدينه",
+ "placeName" : "المنطقه",
+ "addNewAddress" : "اضف عنوان جديد",
+
+
+ "pay" : "ادفع",
+
+ "creditCard" : "بطائق الائتمان",
+
+ "cardNumber" : "رقم البطاقة",
+
+ "cardHolderName" : "اسم حامل البطاقة",
+
+ "expiryDate" : "تاريخ الانتهاء",
+
+ "cvv" : "CVV",
+
+
+ "paymentMethods" : "طريقة الدفع",
+
+ "payWithPaypal" : "بايبال سيتم توفيره لاحقا",
+
+ "mobileWallets" : "محفظة الهاتف",
+
+ "cashOnDelivery" : "الدفع عن الاستلام",
+
+ "otherPaymentMethods" : "طرق دفع اخري",
+
+
+ "placeOrder" : "اطلب الان",
+
+ "payment" : "الدفع",
+
+ "done" : "تم",
+
+ "totalPrice" : "السعر الكلي",
+
+ "subTotal" : "المجموع الفرعي",
+
+ "shipping" : "الشحن",
+
+ "discount" : "الخصم",
+
+ "couponCode" : "كود الخصم",
+
+ "enterCouponCode" : "ادخل كود الخصم",
+
+ "shippingAddress" : "عنوان الشحن",
+
+ "next" : "التالي",
+
+
+ "errorHappen" : "حدث خطا ما",
+ "contentType" : "Content-Type",
+ "applicationJson" : "application/json",
+ "noRouteFound" : "لا يوجد طريق متاح"
+}

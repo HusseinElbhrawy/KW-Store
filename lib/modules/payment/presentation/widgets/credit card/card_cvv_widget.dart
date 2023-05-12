@@ -23,8 +23,8 @@ class CardCVVWidget extends StatelessWidget {
         },
         textInputAction: TextInputAction.done,
         obscureText: true,
-        decoration: const InputDecoration(
-          labelText: AppStrings.cvv,
+        decoration: InputDecoration(
+          labelText: AppStrings.cvv(context),
           hintText: 'XXX',
         ),
         onFieldSubmitted: (value) {

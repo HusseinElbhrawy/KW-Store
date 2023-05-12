@@ -11,10 +11,12 @@ import 'package:kw_store/core/database/i_local_data_base.dart';
 import 'package:kw_store/core/utils/media_query_values.dart';
 import 'package:kw_store/modules/splash/domain/usecases/is_dark_mode_use_case.dart';
 
+import '../../../../config/localization/app_localizations.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/usecase/params/params.dart';
 import '../../../../core/utils/constant.dart';
 import '../../../../core/utils/enums.dart';
+import '../../../home/presentation/bloc/home_bloc.dart';
 import '../../domain/usecases/get_user_id_use_case.dart';
 import '../../domain/usecases/is_logged_use_case.dart';
 import '../../domain/usecases/is_on_boarding_skipped_use_case.dart';
@@ -55,6 +57,9 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       (event, emit) => _getCurrentThemeMode(),
     );
     on<ChangeThemeEvent>((event, emit) => _changeThemeMode(event.isDarkMode));
+    on<GetCurrentLangEvent>((event, emit) => _getCurrentLang());
+    on<ChangeLangEvent>(
+        (event, emit) => _changeLang(event.isArabic, event.context));
   }
 
   void _isOnBoardingSkip(BuildContext context) async {
@@ -156,6 +161,37 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     );
 
     emit(state.copyWith(isDarkMode: value));
+  }
+
+  void _getCurrentLang() async {
+    var currentLang =
+        await serviceLocator<ILocalDataBase>().get(AppConstant.kLang);
+    emit(state.copyWith(currentLang: currentLang == true ? 'ar' : 'en'));
+  }
+
+  void _changeLang(bool value, BuildContext context) async {
+    await serviceLocator<ILocalDataBase>().set(
+      AppConstant.kLang,
+      value,
+    );
+    if (AppLocalizations.of(context)!.isEnLocale) {
+      // change To Arabic
+      emit(state.copyWith(currentLang: 'ar'));
+    } else {
+      emit(state.copyWith(currentLang: 'en'));
+      // change To English
+    }
+    emit(state.copyWith(currentLang: value ? 'ar' : 'en'));
+
+    log('currentLang ${state.currentLang}', name: 'SplashBloc');
+    serviceLocator<HomeBloc>().state.getCartDataData!.data.props.clear();
+    serviceLocator<HomeBloc>().state.getFavoriteDataData!.data.data.clear();
+    serviceLocator<HomeBloc>()
+      ..add(GetHomeDataEvent())
+      ..add(GetCategoriesDataEvent())
+      ..add(GetFavoriteDataEvent())
+      ..add(GetCartDataEvent())
+      ..add(GetTotalPriceEvent());
   }
 
   @override

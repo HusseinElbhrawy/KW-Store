@@ -14,7 +14,7 @@ class NotificationScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: BigTextWidget(
-          AppStrings.notification,
+          AppStrings.notification(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),

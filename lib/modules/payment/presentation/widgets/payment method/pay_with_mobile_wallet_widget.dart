@@ -36,7 +36,7 @@ class PayWithMobileWalletWidget extends StatelessWidget {
                 const Icon(LineAwesomeIcons.wallet),
                 AppConstant.verticalDivider(),
                 SmallTextWidget(
-                  AppStrings.mobileWallets,
+                  AppStrings.mobileWallets(context),
                   fontFamily: AppFonts.jannah,
                   fontWeight: FontWeight.w600,
                   size: AppDimensions.font20(context),

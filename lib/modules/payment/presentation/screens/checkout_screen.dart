@@ -39,7 +39,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Scaffold(
       appBar: AppBar(
         title: SmallTextWidget(
-          AppStrings.checkout,
+          AppStrings.checkout(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),

@@ -30,8 +30,8 @@ class CheckoutWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const BigTextWidget(
-                AppStrings.total,
+              BigTextWidget(
+                AppStrings.total(context),
                 fontWeight: AppFontsWeight.bold,
               ),
               BlocBuilder<HomeBloc, HomeState>(
@@ -53,7 +53,7 @@ class CheckoutWidget extends StatelessWidget {
                   context.navigateTo(Routes.checkoutRoute);
                 },
                 child: SmallTextWidget(
-                  AppStrings.checkout,
+                  AppStrings.checkout(context),
                   size: AppDimensions.font20(context),
                   color: Theme.of(context).textTheme.bodySmall!.color,
                 ),

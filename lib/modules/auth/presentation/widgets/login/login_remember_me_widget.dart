@@ -28,7 +28,7 @@ class LoginRememberMeWidget extends StatelessWidget {
             );
           },
         ),
-        const SmallTextWidget(AppStrings.rememberMe),
+        SmallTextWidget(AppStrings.rememberMe(context)),
       ],
     );
   }

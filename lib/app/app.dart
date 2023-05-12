@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kw_store/app/injector.dart';
 
+import '../config/localization/app_localizations_setup.dart';
 import '../config/router/app_routes.dart';
 import '../config/themes/dark_theme.dart';
 import '../config/themes/light_theme.dart';
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          serviceLocator<SplashBloc>()..add(IsDarkModeEvent(context)),
+      create: (context) => serviceLocator<SplashBloc>()
+        ..add(IsDarkModeEvent(context))
+        ..add(GetCurrentLangEvent()),
       child: BlocBuilder<SplashBloc, SplashState>(
         builder: (context, state) {
           return MaterialApp(
@@ -25,6 +27,12 @@ class MyApp extends StatelessWidget {
             theme: kLightTheme,
             darkTheme: kDarkTheme,
             themeMode: state.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+            locale: Locale(state.currentLang),
+            supportedLocales: AppLocalizationsSetup.supportedLocales,
+            localeResolutionCallback:
+                AppLocalizationsSetup.localeResolutionCallback,
+            localizationsDelegates:
+                AppLocalizationsSetup.localizationsDelegates,
             onGenerateRoute: AppRoutes.onGenerateRoute,
             initialRoute: Routes.splashRoute,
             // initialRoute: Routes.layoutRoute,

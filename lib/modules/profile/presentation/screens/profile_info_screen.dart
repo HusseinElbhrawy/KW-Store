@@ -57,7 +57,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
       appBar: AppBar(
         centerTitle: false,
         title: BigTextWidget(
-          AppStrings.personalInfo,
+          AppStrings.personalInfo(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),
@@ -97,17 +97,17 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
             ),
           ),
           ProfileInfoItemWidget(
-            title: AppStrings.fullName,
+            title: AppStrings.fullName(context),
             controller: nameController,
             enabled: isEdit,
           ),
           ProfileInfoItemWidget(
-            title: AppStrings.phoneNumber,
+            title: AppStrings.phoneNumber(context),
             controller: phoneController,
             enabled: isEdit,
           ),
           ProfileInfoItemWidget(
-            title: AppStrings.emailAddress,
+            title: AppStrings.emailAddress(context),
             controller: emailController,
             enabled: isEdit,
           ),

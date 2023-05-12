@@ -35,7 +35,7 @@ class PayWithCashOnDeliveryWidget extends StatelessWidget {
                 const Icon(LineAwesomeIcons.alternate_wavy_money_bill),
                 AppConstant.verticalDivider(),
                 SmallTextWidget(
-                  AppStrings.cashOnDelivery,
+                  AppStrings.cashOnDelivery(context),
                   fontFamily: AppFonts.jannah,
                   fontWeight: FontWeight.w600,
                   size: AppDimensions.font20(context),

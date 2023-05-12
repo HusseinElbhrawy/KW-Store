@@ -43,7 +43,7 @@ class ErrorScreenWidget extends StatelessWidget {
               ),
               SizedBox(height: context.responsiveHeight(20)),
               BigTextWidget(
-                AppStrings.oops,
+                AppStrings.oops(context),
                 size: AppDimensions.font26(context),
                 fontWeight: AppFontsWeight.bold,
                 color: Theme.of(context).textTheme.bodySmall!.color,
@@ -74,7 +74,7 @@ class ErrorScreenWidget extends StatelessWidget {
                   backgroundColor: Theme.of(context).colorScheme.error,
                 ),
                 child: SmallTextWidget(
-                  AppStrings.retry,
+                  AppStrings.retry(context),
                   color: Theme.of(context).textTheme.bodySmall!.color,
                 ),
               ),

@@ -28,13 +28,13 @@ class DoneScreen extends StatelessWidget {
             height: AppDimensions.doneLottieHeightWidget(context),
             width: double.infinity,
           ),
-          const BigTextWidget(
-            AppStrings.paymentSuccessful,
+          BigTextWidget(
+            AppStrings.paymentSuccessful(context),
             fontFamily: AppFonts.jannah,
           ),
           SizedBox(height: context.responsiveHeight(20)),
           SmallTextWidget(
-            '${AppStrings.yourOrder} #${context.read<PaymentBloc>().orderId} \n${AppStrings.thankYouForPurchase}',
+            '${AppStrings.yourOrder(context)} #${context.read<PaymentBloc>().orderId} \n${AppStrings.thankYouForPurchase(context)}',
             textAlign: TextAlign.center,
             fontFamily: AppFonts.jannah,
           ),

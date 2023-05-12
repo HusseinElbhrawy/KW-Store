@@ -36,7 +36,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(AppConstant.defaultPadding(context)),
             child: BigTextWidget(
-              AppStrings.profile,
+              AppStrings.profile(context),
               fontWeight: AppFontsWeight.medium,
               size: AppDimensions.font20(context),
             ),
@@ -72,7 +72,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.orange.shade50,
             icon: LineAwesomeIcons.user,
-            title: AppStrings.personalInfo,
+            title: AppStrings.personalInfo(context),
             iconColor: Colors.orange.shade300,
             onTap: () {
               context.navigateToWithArguments(
@@ -86,7 +86,7 @@ class ProfileLoadedWidget extends StatelessWidget {
               return ProfileItemWidget(
                 bgColor: Colors.blue.shade50,
                 icon: LineAwesomeIcons.bell,
-                title: AppStrings.notification,
+                title: AppStrings.notification(context),
                 isBadgeVisible: state.notifications!.data!.data.isNotEmpty,
                 badgeCount: state.notifications!.data!.data.length,
                 iconColor: Colors.blue.shade300,
@@ -101,7 +101,7 @@ class ProfileLoadedWidget extends StatelessWidget {
               return ProfileItemWidget(
                 bgColor: Colors.pink.shade50,
                 icon: LineAwesomeIcons.map_marker,
-                title: AppStrings.address,
+                title: AppStrings.address(context),
                 isBadgeVisible: state.address?.isNotEmpty ?? false,
                 badgeCount: state.address?.length ?? 0,
                 iconColor: Colors.pink.shade300,
@@ -114,7 +114,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.purple.shade50,
             icon: LineAwesomeIcons.shopping_bag,
-            title: AppStrings.orders,
+            title: AppStrings.orders(context),
             isBadgeVisible: true,
             badgeCount: 1,
             iconColor: Colors.purple.shade300,
@@ -124,7 +124,7 @@ class ProfileLoadedWidget extends StatelessWidget {
               return ProfileItemWidget(
                 bgColor: Colors.red.shade50,
                 icon: LineAwesomeIcons.heart,
-                title: AppStrings.wishlist,
+                title: AppStrings.wishlist(context),
                 isBadgeVisible: state.getFavoriteDataData!.data.data.isNotEmpty,
                 badgeCount: state.getFavoriteDataData!.data.data.length,
                 iconColor: Colors.red.shade300,
@@ -139,7 +139,7 @@ class ProfileLoadedWidget extends StatelessWidget {
               return ProfileItemWidget(
                 bgColor: Colors.cyan.shade50,
                 icon: LineAwesomeIcons.shopping_cart,
-                title: AppStrings.cart,
+                title: AppStrings.cart(context),
                 isBadgeVisible: state.getCartDataData!.data.products.isNotEmpty,
                 badgeCount: state.getCartDataData!.data.products.length,
                 iconColor: Colors.cyan.shade300,
@@ -152,7 +152,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.green.shade50,
             icon: LineAwesomeIcons.question_circle,
-            title: AppStrings.helpAndSupport,
+            title: AppStrings.helpAndSupport(context),
             iconColor: Colors.green.shade300,
             onTap: () {
               context.navigateTo(Routes.helpAndSupportRoute);
@@ -161,7 +161,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.purple.shade50,
             icon: LineAwesomeIcons.info_circle,
-            title: AppStrings.about,
+            title: AppStrings.about(context),
             iconColor: Colors.purple.shade300,
             onTap: () {
               context.navigateTo(Routes.aboutRoute);
@@ -170,23 +170,30 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.teal.shade50,
             icon: LineAwesomeIcons.language,
-            title: AppStrings.arabic,
+            title: AppStrings.arabic(context),
             iconColor: Colors.teal.shade300,
-            trailing: FlutterSwitch(
-              activeColor: Colors.blue,
-              inactiveColor: Colors.grey,
-              width: context.responsiveWidth(40),
-              height: context.responsiveHeight(20),
-              value: false,
-              onToggle: (value) {
-                log(value.toString());
+            trailing: BlocBuilder<SplashBloc, SplashState>(
+              builder: (context, state) {
+                return FlutterSwitch(
+                  activeColor: Colors.blue,
+                  inactiveColor: Colors.grey,
+                  width: context.responsiveWidth(40),
+                  height: context.responsiveHeight(20),
+                  value: state.currentLang == 'en' ? false : true,
+                  onToggle: (value) {
+                    context
+                        .read<SplashBloc>()
+                        .add(ChangeLangEvent(value, context));
+                    log(value.toString());
+                  },
+                );
               },
             ),
           ),
           ProfileItemWidget(
             bgColor: Colors.blueGrey.shade50,
             icon: LineAwesomeIcons.moon,
-            title: AppStrings.darkMode,
+            title: AppStrings.darkMode(context),
             iconColor: Colors.blueGrey.shade300,
             trailing: BlocBuilder<SplashBloc, SplashState>(
               builder: (context, state) {
@@ -207,7 +214,7 @@ class ProfileLoadedWidget extends StatelessWidget {
           ProfileItemWidget(
             bgColor: Colors.red.shade50,
             icon: LineAwesomeIcons.alternate_sign_out,
-            title: AppStrings.logout,
+            title: AppStrings.logout(context),
             onTap: () {
               log('logout');
               AppUtils.showLogoutBottomSheet(context);

@@ -16,14 +16,14 @@ class LoginHaveNotAnAccountWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SmallTextWidget(AppStrings.donNotHaveAnAccount),
+        SmallTextWidget(AppStrings.donNotHaveAnAccount(context)),
         TextButton(
           onPressed: () {
             context
                 .navigateToWithReplacementAndClearStack(Routes.registersRoute);
           },
-          child: const SmallTextWidget(
-            AppStrings.register,
+          child: SmallTextWidget(
+            AppStrings.register(context),
             fontWeight: AppFontsWeight.bold,
           ),
         ),

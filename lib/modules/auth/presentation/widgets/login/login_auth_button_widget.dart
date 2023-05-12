@@ -68,7 +68,7 @@ class LoginAuthButtonWidget extends StatelessWidget {
                 }
               },
               child: SmallTextWidget(
-                AppStrings.login,
+                AppStrings.login(context),
                 color: Theme.of(context).textTheme.bodySmall!.color,
               ),
             );

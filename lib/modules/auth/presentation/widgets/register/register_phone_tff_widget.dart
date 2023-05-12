@@ -17,17 +17,17 @@ class RegisterPhoneTFFWidget extends StatelessWidget {
     return TextFormField(
       validator: (value) {
         if (!Validator.validateMobile(value!)) {
-          return AppStrings.registerPhoneNumberValidation;
+          return AppStrings.registerPhoneNumberValidation(context);
         }
         return null;
       },
       controller: _phoneController,
       keyboardType: TextInputType.phone,
       textInputAction: TextInputAction.done,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         hintText: '01069233929',
-        label: SmallTextWidget(AppStrings.phoneNumber),
-        prefixIcon: Icon(Icons.phone_android_sharp),
+        label: SmallTextWidget(AppStrings.phoneNumber(context)),
+        prefixIcon: const Icon(Icons.phone_android_sharp),
       ),
     );
   }

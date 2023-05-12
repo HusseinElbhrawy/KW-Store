@@ -38,7 +38,8 @@ class UserImageWithPickButtonWidget extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     MotionToast.info(
-                      description: const SmallTextWidget(AppStrings.comingSoon),
+                      description:
+                          SmallTextWidget(AppStrings.comingSoon(context)),
                       toastDuration: const Duration(seconds: 2),
                     ).show(context);
                   },

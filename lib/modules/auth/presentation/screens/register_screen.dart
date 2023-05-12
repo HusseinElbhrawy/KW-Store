@@ -47,8 +47,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: AppCustomAnimationWidget(
           children: [
             const RegisterLogoWidget(),
-            const BigTextWidget(
-              AppStrings.registerToStart,
+            BigTextWidget(
+              AppStrings.registerToStart(context),
               fontWeight: AppFontsWeight.bold,
               align: TextAlign.center,
             ),

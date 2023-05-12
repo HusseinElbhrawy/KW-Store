@@ -7,12 +7,14 @@ class SplashState extends Equatable {
     this.getUserNameState = RequestState.initial,
     this.isUserLoggedInErrorMessage = '',
     this.isDarkMode = false,
+    this.currentLang = 'en',
   });
   final RequestState isUserLoggedInState;
   final RequestState getUserNameState;
   final String isUserLoggedInErrorMessage;
 
   final bool isDarkMode;
+  final String currentLang;
 
   @override
   List<Object?> get props => [
@@ -20,6 +22,7 @@ class SplashState extends Equatable {
         getUserNameState,
         isUserLoggedInErrorMessage,
         isDarkMode,
+        currentLang,
       ];
 
   SplashState copyWith({
@@ -27,7 +30,7 @@ class SplashState extends Equatable {
     RequestState? getUserNameState,
     String? isUserLoggedInErrorMessage,
     bool? isDarkMode,
-    bool? themeMode,
+    String? currentLang,
   }) {
     return SplashState(
       isUserLoggedInState: isUserLoggedInState ?? this.isUserLoggedInState,
@@ -35,6 +38,7 @@ class SplashState extends Equatable {
       isUserLoggedInErrorMessage:
           isUserLoggedInErrorMessage ?? this.isUserLoggedInErrorMessage,
       isDarkMode: isDarkMode ?? this.isDarkMode,
+      currentLang: currentLang ?? this.currentLang,
     );
   }
 }

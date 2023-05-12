@@ -20,8 +20,8 @@ class CardHolderNameWidget extends StatelessWidget {
         context.read<PaymentBloc>().add(UpdateCardHolderNameEvent(value));
       },
       textInputAction: TextInputAction.next,
-      decoration: const InputDecoration(
-        labelText: AppStrings.cardHolderName,
+      decoration: InputDecoration(
+        labelText: AppStrings.cardHolderName(context),
         hintText: 'HUSSEIN ELBHRAWY',
       ),
       keyboardType: TextInputType.text,

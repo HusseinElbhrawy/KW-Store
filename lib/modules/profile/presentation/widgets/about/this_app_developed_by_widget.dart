@@ -13,7 +13,7 @@ class ThisAppDevelopedByWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
-        text: AppStrings.thisAppDevelopedBy,
+        text: AppStrings.thisAppDevelopedBy(context),
         style: TextStyle(
           fontSize: AppDimensions.font20(context),
           fontWeight: FontWeight.w500,
@@ -21,7 +21,7 @@ class ThisAppDevelopedByWidget extends StatelessWidget {
         ),
         children: [
           TextSpan(
-            text: AppStrings.husseinElbhrawy,
+            text: AppStrings.husseinElbhrawy(context),
             style: TextStyle(
               fontSize: AppDimensions.font20(context),
               fontWeight: FontWeight.w500,

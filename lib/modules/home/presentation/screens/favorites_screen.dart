@@ -16,15 +16,15 @@ class FavoritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const BigTextWidget(
-          AppStrings.favorites,
+        title: BigTextWidget(
+          AppStrings.favorites(context),
           fontWeight: FontWeight.bold,
         ),
       ),
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           if (state.getFavoriteDataData!.data.data.isEmpty) {
-            return const EmptyWidget(title: AppStrings.yourFavoritesIsEmpty);
+            return EmptyWidget(title: AppStrings.yourFavoritesIsEmpty(context));
           } else {
             return AppCustomAnimationWidget(
               children: [

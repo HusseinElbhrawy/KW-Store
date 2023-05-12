@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 state.homeCategoriesErrorMessage ??
                 state.getCartDataErrorMessage ??
                 state.getFavoriteDataErrorMessage ??
-                AppStrings.errorHappen,
+                AppStrings.errorHappen(context),
             onRetry: () {
               serviceLocator<HomeBloc>()
                 ..add(GetHomeDataEvent())

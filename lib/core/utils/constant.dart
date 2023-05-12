@@ -13,6 +13,7 @@ class AppConstant {
   static const String defaultAddress = 'defaultAddress';
 
   static String kDarkMode = 'DARK_MODE';
+  static String kLang = 'LANG';
 
   const AppConstant._();
   static const AppConstant _instance = AppConstant._();

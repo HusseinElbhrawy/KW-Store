@@ -26,7 +26,7 @@ class PasswordLoginTFFWidget extends StatelessWidget {
         return TextFormField(
           validator: (value) {
             if (value!.isEmpty && value.length < 8) {
-              return AppStrings.passwordValidationMessage;
+              return AppStrings.passwordValidationMessage(context);
             }
             return null;
           },
@@ -49,7 +49,7 @@ class PasswordLoginTFFWidget extends StatelessWidget {
           textInputAction: TextInputAction.done,
           decoration: InputDecoration(
             hintText: '**********',
-            label: const SmallTextWidget(AppStrings.password),
+            label: SmallTextWidget(AppStrings.password(context)),
             prefixIcon: const Icon(Icons.lock_outline),
             suffixIcon: IconButton(
               onPressed: () {

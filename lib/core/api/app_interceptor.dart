@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +19,15 @@ class AppInterceptor extends Interceptor {
     Map<String, dynamic> header = {};
     ILocalDataBase localDataBase = serviceLocator<ILocalDataBase>();
     String? token = await localDataBase.get(AppConstant.kUserUID);
+    String? lang =
+        await localDataBase.get(AppConstant.kLang) ?? false ? 'ar' : 'en';
+
+    log('lang: $lang', name: 'AppInterceptor');
 
     if (EndPoint.selectedBaseUrl == EndPoint.baseUrl) {
       header = {
         AppStrings.contentType: AppStrings.applicationJson,
-        'lang': 'en',
+        'lang': lang,
         'Authorization': token,
       };
     } else {

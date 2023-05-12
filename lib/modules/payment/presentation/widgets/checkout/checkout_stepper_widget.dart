@@ -40,7 +40,7 @@ class CheckoutStepperWidget extends StatelessWidget {
                   );
                 },
               ),
-              title: AppStrings.orders,
+              title: AppStrings.orders(context),
             ),
             EasyStep(
               customStep: BlocBuilder<PaymentBloc, PaymentState>(
@@ -51,7 +51,7 @@ class CheckoutStepperWidget extends StatelessWidget {
                   );
                 },
               ),
-              title: AppStrings.payment,
+              title: AppStrings.payment(context),
               topTitle: true,
             ),
             EasyStep(
@@ -63,7 +63,7 @@ class CheckoutStepperWidget extends StatelessWidget {
                   );
                 },
               ),
-              title: AppStrings.done,
+              title: AppStrings.done(context),
             ),
           ],
           onStepReached: (index) =>

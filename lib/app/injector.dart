@@ -92,7 +92,7 @@ Future<void> _setUpBloc() async {
       serviceLocator(),
     ),
   );
-  serviceLocator.registerFactory(
+  serviceLocator.registerLazySingleton(
     () => AuthBloc(
       serviceLocator(),
       serviceLocator(),

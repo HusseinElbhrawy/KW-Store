@@ -22,8 +22,8 @@ class CardExpiryDateWidget extends StatelessWidget {
           context.read<PaymentBloc>().add(UpdateExpiryDateEvent(value));
         },
         textInputAction: TextInputAction.next,
-        decoration: const InputDecoration(
-          labelText: AppStrings.expiryDate,
+        decoration: InputDecoration(
+          labelText: AppStrings.expiryDate(context),
           hintText: 'MM/YY',
         ),
         onTapOutside: (event) {

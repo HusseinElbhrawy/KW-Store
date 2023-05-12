@@ -20,14 +20,14 @@ class CouponCodeTFFWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SmallTextWidget(
-              AppStrings.couponCode,
+              AppStrings.couponCode(context),
               fontFamily: AppFonts.jannah,
               size: AppDimensions.font20(context),
             ),
             AppConstant.horizontalDivider(),
             TextFormField(
               decoration: InputDecoration(
-                hintText: AppStrings.enterCouponCode,
+                hintText: AppStrings.enterCouponCode(context),
                 hintStyle: const TextStyle(
                   fontFamily: AppFonts.jannah,
                 ),

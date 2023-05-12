@@ -21,8 +21,8 @@ class CardNumberWidget extends StatelessWidget {
         context.read<PaymentBloc>().add(UpdateCardNumberEvent(value));
       },
       textInputAction: TextInputAction.next,
-      decoration: const InputDecoration(
-        labelText: AppStrings.cardNumber,
+      decoration: InputDecoration(
+        labelText: AppStrings.cardNumber(context),
         hintText: 'XXXX XXXX XXXX XXXX',
       ),
       keyboardType: TextInputType.number,

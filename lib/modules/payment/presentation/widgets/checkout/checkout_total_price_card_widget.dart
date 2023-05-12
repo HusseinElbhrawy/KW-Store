@@ -23,7 +23,7 @@ class CheckoutTotalPriceCardWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SmallTextWidget(
-              AppStrings.totalPrice,
+              AppStrings.totalPrice(context),
               size: AppDimensions.font20(context),
               fontFamily: AppFonts.jannah,
             ),
@@ -31,8 +31,8 @@ class CheckoutTotalPriceCardWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const SmallTextWidget(
-                  AppStrings.subTotal,
+                SmallTextWidget(
+                  AppStrings.subTotal(context),
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
                 ),
@@ -45,13 +45,13 @@ class CheckoutTotalPriceCardWidget extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 SmallTextWidget(
-                  AppStrings.shipping,
+                  AppStrings.shipping(context),
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
                 ),
-                SmallTextWidget(
+                const SmallTextWidget(
                   '\$0',
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
@@ -60,13 +60,13 @@ class CheckoutTotalPriceCardWidget extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 SmallTextWidget(
-                  AppStrings.discount,
+                  AppStrings.discount(context),
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
                 ),
-                SmallTextWidget(
+                const SmallTextWidget(
                   '\$0',
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
@@ -77,8 +77,8 @@ class CheckoutTotalPriceCardWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const SmallTextWidget(
-                  AppStrings.total,
+                SmallTextWidget(
+                  AppStrings.total(context),
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
                 ),

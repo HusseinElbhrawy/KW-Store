@@ -16,15 +16,15 @@ class RegisterAlreadyHaveAnAccount extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SmallTextWidget(AppStrings.alreadyHaveAnAccount),
+        SmallTextWidget(AppStrings.alreadyHaveAnAccount(context)),
         TextButton(
           onPressed: () {
             context.navigateToWithReplacementAndClearStack(
               Routes.loginRoute,
             );
           },
-          child: const SmallTextWidget(
-            AppStrings.loginNow,
+          child: SmallTextWidget(
+            AppStrings.loginNow(context),
             fontWeight: AppFontsWeight.bold,
           ),
         ),

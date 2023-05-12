@@ -37,7 +37,7 @@ class PayWithOtherMethodsWidget extends StatelessWidget {
                 const Icon(Iconsax.link),
                 AppConstant.verticalDivider(),
                 SmallTextWidget(
-                  AppStrings.otherPaymentMethods,
+                  AppStrings.otherPaymentMethods(context),
                   fontWeight: FontWeight.w600,
                   fontFamily: AppFonts.jannah,
                   size: AppDimensions.font20(context),

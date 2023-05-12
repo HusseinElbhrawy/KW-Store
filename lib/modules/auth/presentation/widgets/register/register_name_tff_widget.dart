@@ -17,16 +17,16 @@ class RegisterNameTFFWidget extends StatelessWidget {
     return TextFormField(
       validator: (value) {
         if (!Validator.validateName(value!)) {
-          return AppStrings.registerNameValidation;
+          return AppStrings.registerNameValidation(context);
         }
         return null;
       },
       controller: _nameController,
       keyboardType: TextInputType.name,
       textInputAction: TextInputAction.next,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         hintText: 'HusseinElbhrawy',
-        label: SmallTextWidget(AppStrings.name),
+        label: SmallTextWidget(AppStrings.name(context)),
         prefixIcon: Icon(Icons.person_2_outlined),
       ),
     );

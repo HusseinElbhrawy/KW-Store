@@ -28,7 +28,7 @@ class SlidableDeleteWidget extends StatelessWidget {
       ),
       backgroundColor: Theme.of(context).colorScheme.errorContainer,
       icon: Icons.delete,
-      label: AppStrings.delete,
+      label: AppStrings.delete(context),
     );
   }
 }

@@ -40,9 +40,22 @@ class ChangeThemeEvent extends SplashEvent {
   final bool isDarkMode;
 
   const ChangeThemeEvent(this.isDarkMode);
-  // final BuildContext context;
   // const ChangeThemeEvent(this.context);
 
   @override
   List<Object?> get props => [isDarkMode];
+}
+
+class GetCurrentLangEvent extends SplashEvent {
+  @override
+  List<Object?> get props => [];
+}
+
+class ChangeLangEvent extends SplashEvent {
+  final BuildContext context;
+  final bool isArabic;
+  const ChangeLangEvent(this.isArabic, this.context);
+
+  @override
+  List<Object?> get props => [isArabic, context];
 }

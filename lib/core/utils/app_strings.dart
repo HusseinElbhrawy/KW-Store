@@ -1,10 +1,15 @@
+import 'package:flutter/material.dart';
+import 'package:kw_store/config/localization/translation_extension.dart';
+
 class AppStrings {
-  static const String backToHome = 'Back to Home';
+  static String backToHome(BuildContext context) => 'backToHome'.tr(context)!;
 
-  static const String paymentSuccessful = 'Payment Successful';
+  static String paymentSuccessful(BuildContext context) =>
+      'paymentSuccessful'.tr(context)!;
 
-  static const String thankYouForPurchase = 'Thank you for your purchase';
-  static const String yourOrder = 'Your Order';
+  static String thankYouForPurchase(BuildContext context) =>
+      'thankYouForPurchase'.tr(context)!;
+  static String yourOrder(BuildContext context) => 'yourOrder'.tr(context)!;
 
   AppStrings._internal();
   static final AppStrings _instance = AppStrings._internal();
@@ -13,153 +18,183 @@ class AppStrings {
   static const appName = 'E Commerce';
 
   //! OnBoarding Screen
-  static const String shoppingNow = 'Shopping Now';
-  static const String offersAndDiscounts = 'Offers & Discounts';
-  static const String secureAndEasyPayment = 'Secure & Easy Payment';
-  static const String loremText =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim. Pellentesque eget.';
+  static String shoppingNow(BuildContext context) => 'shoppingNow'.tr(context)!;
+  static String offersAndDiscounts(BuildContext context) =>
+      'offersAndDiscounts'.tr(context)!;
+  static String secureAndEasyPayment(BuildContext context) =>
+      'secureAndEasyPayment'.tr(context)!;
+  static String loremText(BuildContext context) => 'loremText'.tr(context)!;
 
   //! Login Screen
-  static const String loginToYourAccount = 'Login to your account';
-  static const String resetPassword = 'Reset Password?';
-  static const String donNotHaveAnAccount = 'Don\'t have an account?';
-  static const String register = 'Register';
-  static const String login = 'Login';
-  static const String rememberMe = 'Remember me';
-  static const String password = 'Password';
-  static const String passwordValidationMessage =
-      'InValid,The password must be at least 8 characters';
-  static const String emailValidationMessage =
-      'Please, Enter Valid Email Address';
-  static const String emailAddress = 'Email Address';
+  static String loginToYourAccount(BuildContext context) =>
+      'loginToYourAccount'.tr(context)!;
+  static String resetPassword(BuildContext context) =>
+      'resetPassword'.tr(context)!;
+  static String donNotHaveAnAccount(BuildContext context) =>
+      'donNotHaveAnAccount'.tr(context)!;
+  static String register(BuildContext context) => 'register'.tr(context)!;
+  static String login(BuildContext context) => 'login'.tr(context)!;
+  static String rememberMe(BuildContext context) => 'rememberMe'.tr(context)!;
+  static String password(BuildContext context) => 'password'.tr(context)!;
+  static String passwordValidationMessage(BuildContext context) =>
+      'passwordValidationMessage'.tr(context)!;
+  static String emailValidationMessage(BuildContext context) =>
+      'emailValidationMessage'.tr(context)!;
+  static String emailAddress(BuildContext context) =>
+      'emailAddress'.tr(context)!;
 
   //! REGISTER SCREEN
-  static const String registerToStart = 'Hello! Register to get started';
-  static const String registerNameValidation = 'Please , Enter Valid Name';
-  static const String name = 'Name';
+  static String registerToStart(BuildContext context) =>
+      'registerToStart'.tr(context)!;
+  static String registerNameValidation(BuildContext context) =>
+      'registerNameValidation'.tr(context)!;
+  static String name(BuildContext context) => 'name'.tr(context)!;
 
-  static const String registerPhoneNumberValidation =
-      'Phone Must Start With + And Contain Between 8 and 15 Digits.';
-  static const String phoneNumber = 'Phone Number';
-  static const String alreadyHaveAnAccount = 'Already have an account?';
-  static const String loginNow = 'Login Now';
+  static String registerPhoneNumberValidation(BuildContext context) =>
+      'registerPhoneNumberValidation'.tr(context)!;
+  static String phoneNumber(BuildContext context) => 'phoneNumber'.tr(context)!;
+  static String alreadyHaveAnAccount(BuildContext context) =>
+      'alreadyHaveAnAccount'.tr(context)!;
+  static String loginNow(BuildContext context) => 'loginNow'.tr(context)!;
 
   //! Layout Screen
-  static const String home = 'Home';
+  static String home(BuildContext context) => 'home'.tr(context)!;
 
   //! Home Screen
-  static const String categories = 'Categories';
-  static const String products = 'Products';
-  static const String search = 'Search';
-  static const String retry = 'Retry';
-  static const String oops = 'Oops!';
-  static const String noProductsFound = 'Sorry , No Products Found';
+  static String categories(BuildContext context) => 'categories'.tr(context)!;
+  static String products(BuildContext context) => 'products'.tr(context)!;
+  static String search(BuildContext context) => 'search'.tr(context)!;
+  static String retry(BuildContext context) => 'retry'.tr(context)!;
+  static String oops(BuildContext context) => 'oops'.tr(context)!;
+  static String noProductsFound(BuildContext context) =>
+      'noProductsFound'.tr(context)!;
 
   //! Favorites Screen
-  static const String favorites = 'Favorites';
-  static const String yourFavoritesIsEmpty = 'Your Favorites is Empty!';
+  static String favorites(BuildContext context) => 'favorites'.tr(context)!;
+  static String yourFavoritesIsEmpty(BuildContext context) =>
+      'yourFavoritesIsEmpty'.tr(context)!;
 
   //! Cart Screen
-  static const String yourCartIsEmpty = 'Your cart is empty';
-  static const String startShoppingNow = 'Start shopping now!';
-  static const String cart = 'Cart';
-  static const String total = 'Total';
-  static const String checkout = 'Checkout';
-  static const String delete = 'Delete';
+  static String yourCartIsEmpty(BuildContext context) =>
+      'yourCartIsEmpty'.tr(context)!;
+  static String startShoppingNow(BuildContext context) =>
+      'startShoppingNow'.tr(context)!;
+  static String cart(BuildContext context) => 'cart'.tr(context)!;
+  static String total(BuildContext context) => 'total'.tr(context)!;
+  static String checkout(BuildContext context) => 'checkout'.tr(context)!;
+  static String delete(BuildContext context) => 'delete'.tr(context)!;
 
   //! Products Overview Screen
-  static const String price = 'Price';
+  static String price(BuildContext context) => 'price'.tr(context)!;
 
   //! About Screen
-  static const String about = 'About';
-  static const String storeDetails =
-      "The Store application is an exhibition for companies to book or buy products through companies and stores.";
-  static const String thisAppDevelopedBy = "The application is developed by ";
-  static const String husseinElbhrawy = "Hussein Elbhrawy";
-  static const String contactMe = "Contact Me";
-  static const String error = "Error";
-  static const String whatsAppNotInstalled = "whatsapp no installed";
+  static String about(BuildContext context) => 'about'.tr(context)!;
+  static String storeDetails(BuildContext context) =>
+      "storeDetails".tr(context)!;
+  static String thisAppDevelopedBy(BuildContext context) =>
+      "thisAppDevelopedBy".tr(context)!;
+  static String husseinElbhrawy(BuildContext context) =>
+      "husseinElbhrawy".tr(context)!;
+  static String contactMe(BuildContext context) => "contactMe".tr(context)!;
+  static String error(BuildContext context) => "error".tr(context)!;
+  static String whatsAppNotInstalled(BuildContext context) =>
+      "whatsAppNotInstalled".tr(context)!;
 
   //! Profile Screen
-  static const String profile = 'Account';
-  static const String faqs = 'FAQs';
-  static const String notification = 'Notification';
-  static const String personalInfo = 'Personal Info';
-  static const String fullName = 'Full Name';
-  static const String comingSoon = 'Coming soon';
-  static const String address = 'Address';
-  static const String orders = 'Orders';
-  static const String wishlist = 'Wishlist';
-  static const String helpAndSupport = 'Help & Support';
-  static const String arabic = 'Arabic';
-  static const String darkMode = 'Dark Mode';
-  static const String logout = 'Logout';
-  static const String areYouSureYouWantLogOut =
-      'Are you sure you want to logout?';
-  static const String cancel = 'Cancel';
-  static const String yesLogout = 'Yes, Logout';
+  static String profile(BuildContext context) => 'profile'.tr(context)!;
+  static String faqs(BuildContext context) => 'faqs'.tr(context)!;
+  static String notification(BuildContext context) =>
+      'notification'.tr(context)!;
+  static String personalInfo(BuildContext context) =>
+      'personalInfo'.tr(context)!;
+  static String fullName(BuildContext context) => 'fullName'.tr(context)!;
+  static String comingSoon(BuildContext context) => 'comingSoon'.tr(context)!;
+  static String address(BuildContext context) => 'address'.tr(context)!;
+  static String orders(BuildContext context) => 'orders'.tr(context)!;
+  static String wishlist(BuildContext context) => 'wishlist'.tr(context)!;
+  static String helpAndSupport(BuildContext context) =>
+      'helpAndSupport'.tr(context)!;
+  static String arabic(BuildContext context) => 'arabic'.tr(context)!;
+  static String darkMode(BuildContext context) => 'darkMode'.tr(context)!;
+  static String logout(BuildContext context) => 'logout'.tr(context)!;
+  static String areYouSureYouWantLogOut(BuildContext context) =>
+      'areYouSureYouWantLogOut'.tr(context)!;
+  static String cancel(BuildContext context) => 'cancel'.tr(context)!;
+  static String yesLogout(BuildContext context) => 'yesLogout'.tr(context)!;
 
   //! Map Screen
-  static const String save = 'Save';
-  static const String addNotesForDelivery = 'Add notes for delivery';
-  static const String notes = 'Notes';
-  static const String fullAddressDetails = 'Full Address Details';
-  static const String addressDetails = 'Address Details';
-  static const String state = 'State';
-  static const String city = 'City';
-  static const String placeName = 'Place Name';
-  static const String addNewAddress = 'Add New Address';
+  static String save(BuildContext context) => 'save'.tr(context)!;
+  static String addNotesForDelivery(BuildContext context) =>
+      'addNotesForDelivery'.tr(context)!;
+  static String notes(BuildContext context) => 'notes'.tr(context)!;
+  static String fullAddressDetails(BuildContext context) =>
+      'fullAddressDetails'.tr(context)!;
+  static String addressDetails(BuildContext context) =>
+      'addressDetails'.tr(context)!;
+  static String state(BuildContext context) => 'state'.tr(context)!;
+  static String city(BuildContext context) => 'city'.tr(context)!;
+  static String placeName(BuildContext context) => 'placeName'.tr(context)!;
+  static String addNewAddress(BuildContext context) =>
+      'addNewAddress'.tr(context)!;
 
   //! Credit Card Screen
-  static const String pay = 'Pay';
+  static String pay(BuildContext context) => 'pay'.tr(context)!;
 
-  static const String creditCard = 'Credit Card';
+  static String creditCard(BuildContext context) => 'creditCard'.tr(context)!;
 
-  static const String cardNumber = 'Card Number';
+  static String cardNumber(BuildContext context) => 'cardNumber'.tr(context)!;
 
-  static const String cardHolderName = 'Card Holder Name';
+  static String cardHolderName(BuildContext context) =>
+      'cardHolderName'.tr(context)!;
 
-  static const String expiryDate = 'Expiry Date';
+  static String expiryDate(BuildContext context) => 'expiryDate'.tr(context)!;
 
-  static const String cvv = 'CVV';
+  static String cvv(BuildContext context) => 'cvv'.tr(context)!;
 
   //! Payment Method Screen
-  static const String paymentMethods = 'Payment Method';
+  static String paymentMethods(BuildContext context) =>
+      'paymentMethods'.tr(context)!;
 
-  static const String payWithPaypal = 'Pay With Paypal Coming Soon';
+  static String payWithPaypal(BuildContext context) =>
+      'payWithPaypal'.tr(context)!;
 
-  static const String mobileWallets = 'Mobile Wallet';
+  static String mobileWallets(BuildContext context) =>
+      'mobileWallets'.tr(context)!;
 
-  static const String cashOnDelivery = 'Cash on Delivery';
+  static String cashOnDelivery(BuildContext context) =>
+      'cashOnDelivery'.tr(context)!;
 
-  static const String otherPaymentMethods = 'Other Payment Method';
+  static String otherPaymentMethods(BuildContext context) =>
+      'otherPaymentMethods'.tr(context)!;
 
   //! Checkout Screen
-  static const String placeOrder = 'Place Order';
+  static String placeOrder(BuildContext context) => 'placeOrder'.tr(context)!;
 
-  static const String payment = 'Payment';
+  static String payment(BuildContext context) => 'payment'.tr(context)!;
 
-  static const String done = 'Done';
+  static String done(BuildContext context) => 'done'.tr(context)!;
 
-  static const String totalPrice = 'Total Price';
+  static String totalPrice(BuildContext context) => 'totalPrice'.tr(context)!;
 
-  static const String subTotal = 'Subtotal';
+  static String subTotal(BuildContext context) => 'subTotal'.tr(context)!;
 
-  static const String shipping = 'Shipping';
+  static String shipping(BuildContext context) => 'shipping'.tr(context)!;
 
-  static const String discount = 'Discount';
+  static String discount(BuildContext context) => 'discount'.tr(context)!;
 
-  static const String couponCode = 'Coupon Code';
+  static String couponCode(BuildContext context) => 'couponCode'.tr(context)!;
 
-  static const String enterCouponCode = 'Enter Coupon Code';
+  static String enterCouponCode(BuildContext context) =>
+      'enterCouponCode'.tr(context)!;
 
-  static const String shippingAddress = 'Shipping Address';
+  static String shippingAddress(BuildContext context) =>
+      'shippingAddress'.tr(context)!;
 
-  static const String next = 'Next';
+  static String next(BuildContext context) => 'next'.tr(context)!;
 
   //! General
-  static const String errorHappen = 'Error Happen';
+  static String errorHappen(BuildContext context) => 'errorHappen'.tr(context)!;
   static const String contentType = 'Content-Type';
   static const String applicationJson = 'application/json';
-  static const String noRouteFound = 'No Route Found';
+  static const String noRouteFound = 'noRouteFound';
 }

@@ -59,7 +59,7 @@ class CreditCardPayButtonWidget extends StatelessWidget {
                 context.read<PaymentBloc>().emit(state.copyWith(activeStep: 2));
               },
               child: SmallTextWidget(
-                AppStrings.pay,
+                AppStrings.pay(context),
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
                 size: AppDimensions.font20(context),

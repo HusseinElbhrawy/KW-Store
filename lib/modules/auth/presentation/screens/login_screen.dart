@@ -51,8 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Theme.of(context).textTheme.headlineLarge!.color,
               ),
             ),
-            const BigTextWidget(
-              AppStrings.loginToYourAccount,
+            BigTextWidget(
+              AppStrings.loginToYourAccount(context),
               align: TextAlign.center,
               fontWeight: AppFontsWeight.bold,
             ),
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: AlignmentDirectional.center,
               child: TextButton(
                 onPressed: () {},
-                child: const SmallTextWidget(AppStrings.resetPassword),
+                child: SmallTextWidget(AppStrings.resetPassword(context)),
               ),
             ),
             SizedBox(height: AppDimensions.height45(context) * 2),

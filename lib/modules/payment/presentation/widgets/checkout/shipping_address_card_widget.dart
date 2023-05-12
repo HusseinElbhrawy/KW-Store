@@ -33,8 +33,8 @@ class ShippingAddressCardWidget extends StatelessWidget {
                 ),
                 child: const Icon(Icons.local_shipping_outlined),
               ),
-              const SmallTextWidget(
-                AppStrings.shippingAddress,
+              SmallTextWidget(
+                AppStrings.shippingAddress(context),
                 fontWeight: FontWeight.w600,
                 fontFamily: AppFonts.jannah,
               ),
@@ -72,8 +72,8 @@ class ShippingAddressCardWidget extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const SmallTextWidget(
-                    AppStrings.name,
+                  SmallTextWidget(
+                    AppStrings.name(context),
                     fontWeight: FontWeight.w600,
                     fontFamily: AppFonts.jannah,
                   ),
@@ -99,8 +99,8 @@ class ShippingAddressCardWidget extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const SmallTextWidget(
-                    AppStrings.address,
+                  SmallTextWidget(
+                    AppStrings.address(context),
                     fontWeight: FontWeight.w600,
                     fontFamily: AppFonts.jannah,
                   ),
@@ -125,8 +125,8 @@ class ShippingAddressCardWidget extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const SmallTextWidget(
-                    AppStrings.phoneNumber,
+                  SmallTextWidget(
+                    AppStrings.phoneNumber(context),
                     fontWeight: FontWeight.w600,
                     fontFamily: AppFonts.jannah,
                   ),

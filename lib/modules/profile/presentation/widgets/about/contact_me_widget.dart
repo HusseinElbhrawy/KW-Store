@@ -37,9 +37,9 @@ class ContactMeWidget extends StatelessWidget {
               await launchUrl(Uri.parse(AppConstant.whatsappUrl));
             } else {
               MotionToast.error(
-                title: const Text(AppStrings.error),
-                description: const Text(
-                  AppStrings.whatsAppNotInstalled,
+                title: Text(AppStrings.error(context)),
+                description: Text(
+                  AppStrings.whatsAppNotInstalled(context),
                 ),
               ).show(context);
             }

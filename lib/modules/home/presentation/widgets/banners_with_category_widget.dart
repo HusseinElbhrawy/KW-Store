@@ -35,8 +35,8 @@ class BannersWithCategoryWidget extends StatelessWidget {
             children: [
               const HomeBannerWidget(),
               AppConstant.horizontalDivider(),
-              const BigTextWidget(
-                AppStrings.categories,
+              BigTextWidget(
+                AppStrings.categories(context),
                 fontWeight: AppFontsWeight.bold,
               ),
               const HomeCategoriesWidget(),

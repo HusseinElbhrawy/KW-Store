@@ -38,7 +38,7 @@ class ProductOverviewBottomNavWidget extends StatelessWidget {
         children: [
           ListTile(
             title: SmallTextWidget(
-              AppStrings.price,
+              AppStrings.price(context),
               color: Theme.of(context).hintColor.withOpacity(.5),
             ),
             subtitle: Row(

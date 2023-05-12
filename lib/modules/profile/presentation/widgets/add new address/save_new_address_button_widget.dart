@@ -62,7 +62,7 @@ class SaveNewAddressButtonWidget extends StatelessWidget {
                 ),
               ),
               child: BigTextWidget(
-                AppStrings.save,
+                AppStrings.save(context),
                 size: AppDimensions.font20(context),
                 fontWeight: FontWeight.w600,
                 color: Colors.white,

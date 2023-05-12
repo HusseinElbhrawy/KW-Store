@@ -112,8 +112,8 @@ class MethodsWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const SmallTextWidget(
-                    AppStrings.next,
+                  child: SmallTextWidget(
+                    AppStrings.next(context),
                     fontWeight: AppFontsWeight.semiBold,
                     color: Colors.white,
                   ),

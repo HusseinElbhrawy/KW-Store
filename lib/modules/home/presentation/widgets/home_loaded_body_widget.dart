@@ -36,8 +36,8 @@ class HomeLoadedBodyWidget extends StatelessWidget {
                 const HomeSearchWidget(),
                 AppConstant.horizontalDivider(),
                 const BannersWithCategoryWidget(),
-                const BigTextWidget(
-                  AppStrings.products,
+                BigTextWidget(
+                  AppStrings.products(context),
                   fontWeight: AppFontsWeight.bold,
                 ),
                 AppConstant.horizontalDivider(),

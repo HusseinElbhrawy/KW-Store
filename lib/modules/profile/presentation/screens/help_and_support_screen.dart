@@ -14,7 +14,7 @@ class HelpAndSupportScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: BigTextWidget(
-          AppStrings.faqs,
+          AppStrings.faqs(context),
           size: AppDimensions.font20(context),
           fontWeight: FontWeight.w600,
         ),

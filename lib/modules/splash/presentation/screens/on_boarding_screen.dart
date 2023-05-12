@@ -39,11 +39,11 @@ class _OnBoardingInformationWidgetState
     extends State<OnBoardingInformationWidget> {
   int currentIndex = 0;
   double initProgressValue = 0.33;
-  List<String> titles = [
-    AppStrings.shoppingNow,
-    AppStrings.offersAndDiscounts,
-    AppStrings.secureAndEasyPayment,
-  ];
+  List<String> titles(BuildContext context) => [
+        AppStrings.shoppingNow(context),
+        AppStrings.offersAndDiscounts(context),
+        AppStrings.secureAndEasyPayment(context),
+      ];
   List<String> images = [
     AppImagesAssets.onBoarding1,
     AppImagesAssets.onBoarding2,
@@ -91,12 +91,12 @@ class _OnBoardingInformationWidgetState
                   crossFadeState: CrossFadeState.showFirst,
                   duration: const Duration(milliseconds: 300),
                   firstChild: BigTextWidget(
-                    titles[currentIndex],
+                    titles(context)[currentIndex],
                     fontWeight: AppFontsWeight.bold,
                     color: Colors.black,
                   ),
                   secondChild: BigTextWidget(
-                    titles[currentIndex],
+                    titles(context)[currentIndex],
                     fontWeight: AppFontsWeight.bold,
                     color: Colors.black,
                   ),
@@ -106,8 +106,8 @@ class _OnBoardingInformationWidgetState
                     horizontal: AppConstant.defaultPadding(context) * 2,
                     vertical: AppConstant.defaultPadding(context) / 2,
                   ),
-                  child: const SmallTextWidget(
-                    AppStrings.loremText,
+                  child: SmallTextWidget(
+                    AppStrings.loremText(context),
                     maxLines: 2,
                     textAlign: TextAlign.center,
                     color: Colors.black,

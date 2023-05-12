@@ -39,7 +39,7 @@ class _CartOrderState extends State<CartOrder> {
               child: Row(
                 children: [
                   SmallTextWidget(
-                    '${AppStrings.total} : \$${state.totalPrice.toString()}',
+                    '${AppStrings.total(context)} : \$${state.totalPrice.toString()}',
                     fontWeight: FontWeight.w600,
                   ),
                   const Spacer(),
@@ -57,8 +57,8 @@ class _CartOrderState extends State<CartOrder> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: const SmallTextWidget(
-                      AppStrings.placeOrder,
+                    child: SmallTextWidget(
+                      AppStrings.placeOrder(context),
                       fontWeight: AppFontsWeight.semiBold,
                     ),
                   ),

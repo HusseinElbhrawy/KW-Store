@@ -60,20 +60,20 @@ class AddressInformationWidget extends StatelessWidget {
           ),
           AppConstant.horizontalDivider(),
           BigTextWidget(
-            AppStrings.addressDetails,
+            AppStrings.addressDetails(context),
             fontWeight: FontWeight.w600,
             size: AppDimensions.font20(context),
           ),
           TextFormField(
             controller: context.read<ProfileBloc>().addressDetailsController,
             maxLines: 2,
-            decoration: const InputDecoration(
-              hintText: AppStrings.fullAddressDetails,
+            decoration: InputDecoration(
+              hintText: AppStrings.fullAddressDetails(context),
             ),
           ),
           AppConstant.horizontalDivider(),
           BigTextWidget(
-            AppStrings.notes,
+            AppStrings.notes(context),
             size: AppDimensions.font20(context),
             fontWeight: FontWeight.w600,
           ),
@@ -81,8 +81,8 @@ class AddressInformationWidget extends StatelessWidget {
             maxLines: 3,
             maxLength: 100,
             controller: context.read<ProfileBloc>().notesController,
-            decoration: const InputDecoration(
-              hintText: AppStrings.addNotesForDelivery,
+            decoration: InputDecoration(
+              hintText: AppStrings.addNotesForDelivery(context),
             ),
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kw_store/config/localization/translation_extension.dart';
 
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/utils/app_strings.dart';
@@ -25,8 +26,8 @@ class BackToHomeButtonWidget extends StatelessWidget {
         onPressed: () => context.navigateToWithReplacementAndClearStack(
           Routes.layoutRoute,
         ),
-        child: const SmallTextWidget(
-          AppStrings.backToHome,
+        child: SmallTextWidget(
+          AppStrings.backToHome(context),
           fontFamily: AppFonts.jannah,
         ),
       ),
