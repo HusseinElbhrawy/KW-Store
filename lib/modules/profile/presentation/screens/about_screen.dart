@@ -43,7 +43,7 @@ class AboutScreen extends StatelessWidget {
           AppConstant.horizontalDivider(),
           const ThisAppDevelopedByWidget(),
           BigTextWidget(
-            "\n\n${AppStrings.contactMe}\n",
+            "\n\n${AppStrings.contactMe(context)}\n",
             size: AppDimensions.font20(context),
             fontWeight: FontWeight.w500,
             overflow: TextOverflow.visible,

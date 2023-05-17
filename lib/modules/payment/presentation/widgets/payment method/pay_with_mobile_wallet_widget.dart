@@ -26,7 +26,7 @@ class PayWithMobileWalletWidget extends StatelessWidget {
           onChange: (value) {
             showWarningToast('Mobile Wallet Coming Soon').show(context);
           },
-          value: PaymentMethod.mobileWallet,
+          value: CustomPaymentMethod.mobileWallet,
           secondWidget: Padding(
             padding: EdgeInsets.symmetric(
               vertical: AppConstant.defaultPadding(context) * 2,

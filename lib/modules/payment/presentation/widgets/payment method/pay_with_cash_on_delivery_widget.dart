@@ -25,7 +25,7 @@ class PayWithCashOnDeliveryWidget extends StatelessWidget {
           onChange: (value) {
             context.read<PaymentBloc>().add(ChoosePaymentMethodEvent(value!));
           },
-          value: PaymentMethod.cashOnDelivery,
+          value: CustomPaymentMethod.cashOnDelivery,
           secondWidget: Padding(
             padding: EdgeInsets.symmetric(
               vertical: AppConstant.defaultPadding(context) * 2,

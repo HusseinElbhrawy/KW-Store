@@ -18,9 +18,7 @@ abstract class HomeRemoteDataSource {
 class HomeRemoteDataSourceImplementation implements HomeRemoteDataSource {
   final ApiConsumer apiConsumer;
 
-  HomeRemoteDataSourceImplementation(this.apiConsumer) {
-    EndPoint.selectedBaseUrl = EndPoint.baseUrl;
-  }
+  HomeRemoteDataSourceImplementation(this.apiConsumer);
   @override
   Future<HomeModel> getHomeData() async {
     final response = await apiConsumer.get(EndPoint.home);

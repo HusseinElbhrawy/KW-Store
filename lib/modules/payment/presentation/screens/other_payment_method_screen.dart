@@ -25,7 +25,7 @@ class OtherPaymentMethodScreen extends StatefulWidget {
 class _OtherPaymentMethodScreenState extends State<OtherPaymentMethodScreen> {
   @override
   void initState() {
-    BlocProvider.of<PaymentBloc>(context).add(GetRefCodeEvent());
+    // BlocProvider.of<PaymentBloc>(context).add(GetRefCodeEvent());
     super.initState();
   }
 

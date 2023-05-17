@@ -27,7 +27,7 @@ class PayWithOtherMethodsWidget extends StatelessWidget {
           onChange: (value) {
             context.read<PaymentBloc>().add(ChoosePaymentMethodEvent(value!));
           },
-          value: PaymentMethod.other,
+          value: CustomPaymentMethod.other,
           secondWidget: Padding(
             padding: EdgeInsets.symmetric(
               vertical: AppConstant.defaultPadding(context) * 2,

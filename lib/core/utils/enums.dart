@@ -5,7 +5,7 @@ enum RequestState {
   error,
 }
 
-enum PaymentMethod {
+enum CustomPaymentMethod {
   paypal,
   visa,
   mastercard,

@@ -8,7 +8,7 @@ class PaymentState extends Equatable {
     this.cvvCode = '',
     this.expiryDate = '',
     this.showBackView = false,
-    this.paymentMethod = PaymentMethod.visa,
+    this.paymentMethod = CustomPaymentMethod.visa,
     this.isUserSelectedPaymentMethod = false,
     this.currentPaymentScreen = 0,
     this.activeStep = 0,
@@ -31,7 +31,7 @@ class PaymentState extends Equatable {
   final String cvvCode;
   final String expiryDate;
   final bool showBackView;
-  final PaymentMethod paymentMethod;
+  final CustomPaymentMethod paymentMethod;
 
   //! Payment
   final bool isUserSelectedPaymentMethod;
@@ -93,7 +93,7 @@ class PaymentState extends Equatable {
     String? cvvCode,
     String? expiryDate,
     bool? showBackView,
-    PaymentMethod? paymentMethod,
+    CustomPaymentMethod? paymentMethod,
     bool? isUserSelectedPaymentMethod,
     int? currentPaymentScreen,
     int? activeStep,

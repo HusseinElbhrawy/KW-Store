@@ -23,19 +23,14 @@ class AppInterceptor extends Interceptor {
         await localDataBase.get(AppConstant.kLang) ?? false ? 'ar' : 'en';
 
     log('lang: $lang', name: 'AppInterceptor');
-
-    if (EndPoint.selectedBaseUrl.compareTo(EndPoint.baseUrl) == 0) {
-      header = {
-        AppStrings.contentType: AppStrings.applicationJson,
-        'lang': lang,
-        'Authorization': token,
-      };
-    } else {
-      header = {};
-    }
+    header = {
+      AppStrings.contentType: AppStrings.applicationJson,
+      'lang': lang,
+      'Authorization': token,
+    };
 
     options
-      ..baseUrl = EndPoint.selectedBaseUrl
+      ..baseUrl = EndPoint.baseUrl
       ..responseType = ResponseType.plain
       ..followRedirects = false
       ..validateStatus = (status) {

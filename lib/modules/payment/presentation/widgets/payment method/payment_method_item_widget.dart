@@ -16,9 +16,9 @@ class PaymentMethodItemWidget extends StatelessWidget {
   }) : super(key: key);
   final String? path;
   final Widget? secondWidget;
-  final PaymentMethod value;
-  final void Function(PaymentMethod?) onChange;
-  final PaymentMethod groupValue;
+  final CustomPaymentMethod value;
+  final void Function(CustomPaymentMethod?) onChange;
+  final CustomPaymentMethod groupValue;
   @override
   Widget build(BuildContext context) {
     return Card(

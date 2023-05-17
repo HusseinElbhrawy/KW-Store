@@ -23,7 +23,7 @@ class PayWithMasterCardWidget extends StatelessWidget {
           onChange: (value) {
             context.read<PaymentBloc>().add(ChoosePaymentMethodEvent(value!));
           },
-          value: PaymentMethod.mastercard,
+          value: CustomPaymentMethod.mastercard,
         );
       },
     );

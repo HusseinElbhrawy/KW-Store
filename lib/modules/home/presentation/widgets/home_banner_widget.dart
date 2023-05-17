@@ -97,7 +97,7 @@ class HomeBannerLoadedWidget extends StatelessWidget {
             },
             options: CarouselOptions(
               height: AppDimensions.bannerHeight(context),
-              initialPage: 0,
+              initialPage: 3,
               enableInfiniteScroll: false,
               enlargeCenterPage: true,
             ),

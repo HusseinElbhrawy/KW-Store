@@ -90,17 +90,18 @@ class MethodsWidget extends StatelessWidget {
                   onPressed: () {
                     //Todo : Code Refactoring
                     var state = context.read<PaymentBloc>().state;
-                    if (state.paymentMethod == PaymentMethod.visa ||
-                        state.paymentMethod == PaymentMethod.mastercard) {
+                    if (state.paymentMethod == CustomPaymentMethod.visa ||
+                        state.paymentMethod == CustomPaymentMethod.mastercard) {
                       context
                           .read<PaymentBloc>()
                           .emit(state.copyWith(currentPaymentScreen: 1));
                     } else if (state.paymentMethod ==
-                        PaymentMethod.cashOnDelivery) {
+                        CustomPaymentMethod.cashOnDelivery) {
                       context
                           .read<PaymentBloc>()
                           .emit(state.copyWith(activeStep: 2));
-                    } else if (state.paymentMethod == PaymentMethod.other) {
+                    } else if (state.paymentMethod ==
+                        CustomPaymentMethod.other) {
                       context
                           .read<PaymentBloc>()
                           .emit(state.copyWith(currentPaymentScreen: 2));

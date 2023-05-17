@@ -12,10 +12,7 @@ abstract class AuthRemoteDataSource {
 class AuthRemoteDataSourceImplementationWithApi extends AuthRemoteDataSource {
   final ApiConsumer apiConsumer;
 
-  AuthRemoteDataSourceImplementationWithApi(this.apiConsumer) {
-    EndPoint.selectedBaseUrl = EndPoint.baseUrl;
-  }
-
+  AuthRemoteDataSourceImplementationWithApi(this.apiConsumer);
   @override
   Future<LoginModel> loginWithEmailAndPassword(LoginParams login) async {
     final response = await apiConsumer.post(

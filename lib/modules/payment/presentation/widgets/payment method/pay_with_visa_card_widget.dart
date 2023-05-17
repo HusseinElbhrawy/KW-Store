@@ -21,7 +21,7 @@ class PayWithVisaCardWidget extends StatelessWidget {
           onChange: (value) {
             context.read<PaymentBloc>().add(ChoosePaymentMethodEvent(value!));
           },
-          value: PaymentMethod.visa,
+          value: CustomPaymentMethod.visa,
         );
       },
     );

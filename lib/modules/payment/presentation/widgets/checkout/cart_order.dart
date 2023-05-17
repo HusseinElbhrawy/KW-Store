@@ -45,11 +45,10 @@ class _CartOrderState extends State<CartOrder> {
                   const Spacer(),
                   ElevatedButton(
                     onPressed: () {
+                      context.read<PaymentBloc>().makePayment(context);
                       context
                           .read<PaymentBloc>()
                           .add(const GoToNextStepEvent(1));
-
-                      context.read<PaymentBloc>().add(PaymentKeyRequestEvent());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,

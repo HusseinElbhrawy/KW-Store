@@ -33,7 +33,7 @@ class ShowCreditCardFrontViewEvent extends PaymentEvent {}
 
 class ChoosePaymentMethodEvent extends PaymentEvent {
   const ChoosePaymentMethodEvent(this.paymentMethod);
-  final PaymentMethod paymentMethod;
+  final CustomPaymentMethod paymentMethod;
 }
 
 class GoToNextStepEvent extends PaymentEvent {
@@ -41,10 +41,10 @@ class GoToNextStepEvent extends PaymentEvent {
   final int activeStep;
 }
 
-class PaymentAuthenticationEvent extends PaymentEvent {}
+// class PaymentAuthenticationEvent extends PaymentEvent {}
 
-class OrderRegistrationEvent extends PaymentEvent {}
+// class OrderRegistrationEvent extends PaymentEvent {}
 
-class PaymentKeyRequestEvent extends PaymentEvent {}
+// class PaymentKeyRequestEvent extends PaymentEvent {}
 
-class GetRefCodeEvent extends PaymentEvent {}
+// class GetRefCodeEvent extends PaymentEvent {}

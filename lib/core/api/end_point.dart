@@ -10,14 +10,4 @@ class EndPoint {
   static const String updateProfile = 'update-profile';
   static const String notifications = 'notifications';
   static const String faqs = 'faqs';
-
-  // static const String paymentBaseUrl = 'https://accept.paymob.com/api/';
-  // static const String paymentAuthentication = 'auth/tokens';
-  // static const String paymentOrderRegistration = 'ecommerce/orders';
-  // static const String paymentKey = 'acceptance/payment_keys';
-  // // static const String paymentRefCode = 'acceptance/payments/pay';
-  // static const String paymentRefCode =
-  //     'https://accept.paymob.com/api/acceptance/payments/pay';
-
-  static String selectedBaseUrl = baseUrl;
 }

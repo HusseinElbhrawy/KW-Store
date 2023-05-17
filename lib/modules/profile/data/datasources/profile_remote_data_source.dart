@@ -18,10 +18,7 @@ abstract class ProfileRemoteDataSource {
 class ProfileRemoteDataSourceImplementation implements ProfileRemoteDataSource {
   final ApiConsumer _apiConsumer;
 
-  ProfileRemoteDataSourceImplementation(this._apiConsumer) {
-    EndPoint.selectedBaseUrl = EndPoint.baseUrl;
-  }
-
+  ProfileRemoteDataSourceImplementation(this._apiConsumer);
   @override
   Future<ProfileModel> getProfileData() async {
     final response = await _apiConsumer.get(EndPoint.profile);

@@ -2,19 +2,19 @@ import 'package:flutter_credit_card/credit_card_widget.dart';
 
 import '../utils/enums.dart';
 
-extension SelectPaymentMethod on PaymentMethod {
+extension SelectPaymentMethod on CustomPaymentMethod {
   CardType getCurrentPaymentMethod() {
     switch (this) {
-      case PaymentMethod.visa:
+      case CustomPaymentMethod.visa:
         return CardType.visa;
 
-      case PaymentMethod.mastercard:
+      case CustomPaymentMethod.mastercard:
         return CardType.mastercard;
 
-      case PaymentMethod.mobileWallet:
-      case PaymentMethod.paypal:
-      case PaymentMethod.cashOnDelivery:
-      case PaymentMethod.other:
+      case CustomPaymentMethod.mobileWallet:
+      case CustomPaymentMethod.paypal:
+      case CustomPaymentMethod.cashOnDelivery:
+      case CustomPaymentMethod.other:
         return CardType.otherBrand;
     }
   }

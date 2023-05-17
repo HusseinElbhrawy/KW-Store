@@ -21,7 +21,7 @@ class PayWithPaypalCardWidget extends StatelessWidget {
       onChange: (value) {
         showWarningToast(AppStrings.payWithPaypal(context)).show(context);
       },
-      value: PaymentMethod.paypal,
+      value: CustomPaymentMethod.paypal,
     );
   }
 }

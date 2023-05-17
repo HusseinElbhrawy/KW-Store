@@ -9,7 +9,6 @@ import 'package:path_provider/path_provider.dart';
 import '../core/api/api_consumer.dart';
 import '../core/api/app_interceptor.dart';
 import '../core/api/dio_consumer.dart';
-import '../core/api/payment_interceptor.dart';
 import '../core/database/i_local_data_base.dart';
 import '../core/database/local_data_base_with_hive.dart';
 import '../core/network/network.dart';
@@ -34,13 +33,6 @@ import '../modules/home/domain/usecases/get_categories_data_use_case.dart';
 import '../modules/home/domain/usecases/get_home_data_use_case.dart';
 import '../modules/home/domain/usecases/get_specific_category_use_case.dart';
 import '../modules/home/presentation/bloc/home_bloc.dart';
-import '../modules/payment/data/datasources/payment_remote_data_source.dart';
-import '../modules/payment/data/repositories/payment_repository_implementation.dart';
-import '../modules/payment/domain/repositories/payment_repository.dart';
-import '../modules/payment/domain/usecases/authentication_payment_use_case.dart';
-import '../modules/payment/domain/usecases/ger_ref_code_use_case.dart';
-import '../modules/payment/domain/usecases/get_payment_key_use_case.dart';
-import '../modules/payment/domain/usecases/order_registration_use_case.dart';
 import '../modules/payment/presentation/bloc/payment_bloc.dart';
 import '../modules/profile/data/datasources/profile_local_data_source.dart';
 import '../modules/profile/data/datasources/profile_remote_data_source.dart';
@@ -127,10 +119,10 @@ Future<void> _setUpBloc() async {
     () => PaymentBloc(
       serviceLocator(),
       serviceLocator(),
-      serviceLocator(),
-      serviceLocator(),
-      serviceLocator(),
-      serviceLocator(),
+      // serviceLocator(),
+      // serviceLocator(),
+      // serviceLocator(),
+      // serviceLocator(),
     ),
   );
 }
@@ -202,18 +194,18 @@ Future<void> _setUpUsecases() async {
   serviceLocator.registerLazySingleton(
     () => UpdateUserAddressUseCase(serviceLocator()),
   );
-  serviceLocator.registerLazySingleton(
-    () => AuthenticationPaymentUseCase(serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => GerRefCodeUseCase(serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => GetPaymentKeyUseCase(serviceLocator()),
-  );
-  serviceLocator.registerLazySingleton(
-    () => OrderRegistrationUseCase(serviceLocator()),
-  );
+  // serviceLocator.registerLazySingleton(
+  //   () => AuthenticationPaymentUseCase(serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => GerRefCodeUseCase(serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => GetPaymentKeyUseCase(serviceLocator()),
+  // );
+  // serviceLocator.registerLazySingleton(
+  //   () => OrderRegistrationUseCase(serviceLocator()),
+  // );
   serviceLocator.registerLazySingleton(
     () => IsDarkModeUseCase(serviceLocator()),
   );
@@ -245,9 +237,9 @@ Future<void> _setUpRepository() async {
       serviceLocator(),
     ),
   );
-  serviceLocator.registerLazySingleton<PaymentRepository>(
-    () => PaymentRepositoryImplementation(serviceLocator()),
-  );
+  // serviceLocator.registerLazySingleton<PaymentRepository>(
+  //   () => PaymentRepositoryImplementation(serviceLocator()),
+  // );
 }
 
 Future<void> _setUpDatasource() async {
@@ -274,11 +266,11 @@ Future<void> _setUpDatasource() async {
       serviceLocator(),
     ),
   );
-  serviceLocator.registerLazySingleton<PaymentRemoteDataSource>(
-    () => PaymentRemoteDataSourceImplementation(
-      serviceLocator(),
-    ),
-  );
+  // serviceLocator.registerLazySingleton<PaymentRemoteDataSource>(
+  //   () => PaymentRemoteDataSourceImplementation(
+  //     serviceLocator(),
+  //   ),
+  // );
 }
 
 Future<void> _setUpUtils() async {
@@ -311,7 +303,6 @@ Future<void> _setUpExternal() async {
   serviceLocator.registerLazySingleton<HiveInterface>(() => Hive);
 
   serviceLocator.registerLazySingleton(() => AppInterceptor());
-  serviceLocator.registerLazySingleton(() => PaymentInterceptor());
   serviceLocator.registerLazySingleton(
     () => LogInterceptor(
       request: true,
